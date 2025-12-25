@@ -1,0 +1,34 @@
+/* Logo LUÂNEM Style */
+.logo a {
+    font-size: 32px;
+    font-weight: 800;
+    color: #FFF;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #0066FF, #00D4FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+}
+
+.logo a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #0066FF, #00D4FF);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Remove old .dot style since we don't use it anymore */
+.logo .dot {
+    display: none;
+}

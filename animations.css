@@ -1,0 +1,559 @@
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 50%, rgba(0, 102, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+    animation: particleFloat 15s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes particleFloat {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(50px, -50px) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Animated Gradient Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        rgba(0, 102, 255, 0.05) 0%, 
+        rgba(0, 212, 255, 0.05) 50%,
+        rgba(0, 102, 255, 0.05) 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Enhanced Fade In Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Apply animations to sections */
+.hero-content > * {
+    animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.hero-text .greeting {
+    animation-delay: 0.1s;
+}
+
+.hero-text .hero-title {
+    animation-delay: 0.2s;
+}
+
+.hero-text .typing-container {
+    animation-delay: 0.3s;
+}
+
+.hero-text .hero-description {
+    animation-delay: 0.4s;
+}
+
+.hero-text .hero-buttons {
+    animation-delay: 0.5s;
+}
+
+.hero-text .social-links {
+    animation-delay: 0.6s;
+}
+
+.hero-image {
+    animation: fadeInRight 1s ease-out 0.4s backwards;
+}
+
+/* Glowing Button Effect */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Pulsing Glow Effect */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 102, 255, 0.6), 
+                    0 0 60px rgba(0, 212, 255, 0.3);
+    }
+}
+
+.btn-primary {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Image Wrapper Animation */
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #0066FF, #00D4FF, #0066FF);
+    border-radius: 50%;
+    z-index: -1;
+    animation: rotate 4s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.image-wrapper img {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Scroll Down Animation */
+.scroll-down {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Section Badge Animation */
+.section-badge {
+    animation: slideIn 0.6s ease-out;
+    position: relative;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Enhanced Card Hover Effects */
+.project-card,
+.achievement-card,
+.info-card,
+.stat-item,
+.soft-skill-item {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.project-card::before,
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 212, 255, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s;
+    border-radius: 20px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.project-card:hover::before,
+.achievement-card:hover::before {
+    opacity: 1;
+}
+
+/* Skill Icon Bounce */
+.skill-icon {
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+    animation: iconBounce 0.6s ease;
+}
+
+@keyframes iconBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Progress Bar Fill Animation */
+.progress {
+    position: relative;
+    overflow: visible;
+}
+
+.progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(10px);
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Tag Pop Animation */
+.tag {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tag:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.3);
+}
+
+/* Social Links Advanced Hover */
+.social-links a {
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+}
+
+.social-links a:hover::before {
+    width: 100px;
+    height: 100px;
+}
+
+/* Typing Cursor Glow */
+.cursor {
+    text-shadow: 0 0 10px rgba(0, 102, 255, 0.8);
+}
+
+/* Enhanced Navbar Scroll Effect */
+.navbar.scrolled {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.navbar.scrolled .logo a {
+    animation: logoGlow 2s ease-in-out infinite;
+}
+
+@keyframes logoGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(0, 102, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+    }
+}
+
+/* Filter Button Wave Effect */
+.filter-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+}
+
+.filter-btn:hover::after {
+    width: 200px;
+    height: 200px;
+}
+
+/* Achievement Badge Spin */
+.achievement-badge {
+    transition: all 0.4s ease;
+}
+
+.achievement-card:hover .achievement-badge {
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Form Input Focus Glow */
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* Scroll Top Button Enhanced */
+.scroll-top {
+    transition: all 0.3s ease;
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.5);
+}
+
+.scroll-top i {
+    animation: scrollArrow 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollArrow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Loading Animation */
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Parallax Effect for Sections */
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Text Gradient Animation */
+@keyframes textGradient {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.section-title {
+    background: linear-gradient(90deg, #E6F1FF, #0066FF, #00D4FF, #E6F1FF);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textGradient 3s ease infinite;
+}
+
+/* Stagger Animation for Grid Items */
+.projects-grid .project-card,
+.achievements-grid .achievement-card {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.projects-grid .project-card:nth-child(1),
+.achievements-grid .achievement-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.projects-grid .project-card:nth-child(2),
+.achievements-grid .achievement-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.projects-grid .project-card:nth-child(3),
+.achievements-grid .achievement-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.projects-grid .project-card:nth-child(4),
+.achievements-grid .achievement-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.projects-grid .project-card:nth-child(5),
+.achievements-grid .achievement-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.projects-grid .project-card:nth-child(6),
+.achievements-grid .achievement-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* Neon Glow Effect on Hover */
+.project-link:hover {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.8),
+                0 0 40px rgba(0, 212, 255, 0.6);
+}
+
+/* Smooth Reveal on Scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Animations */
+@media (max-width: 768px) {
+    /* Reduce animation intensity on mobile */
+    .hero::before,
+    body::before {
+        animation-duration: 20s;
+    }
+    
+    .image-wrapper::before {
+        animation: none;
+    }
+    
+    .btn-primary {
+        animation: none;
+    }
+}
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

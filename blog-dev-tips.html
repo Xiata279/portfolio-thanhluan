@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Development Tips Mọi Developer Cần Biết | Thanh Luân</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog-styles.css">
+    <link rel="stylesheet" href="blog-post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">LUÂNEM</a>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="index.html#blog" class="nav-link active">Blog</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <article class="blog-post">
+        <div class="post-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Trang chủ</a>
+                    <span>/</span>
+                    <a href="index.html#blog">Blog</a>
+                    <span>/</span>
+                    <span>Dev Tips</span>
+                </div>
+                <div class="post-category">Code</div>
+                <h1>10 Development Tips Mọi Developer Cần Biết</h1>
+                <div class="post-meta">
+                    <div class="author-info">
+                        <img src="assets/avatar.jpg" alt="Thanh Luân">
+                        <div>
+                            <span class="author-name">Nguyễn Thanh Luân</span>
+                            <span class="post-date">03 Tháng 11, 2025</span>
+                        </div>
+                    </div>
+                    <div class="post-stats">
+                        <span><i class="fas fa-clock"></i> 9 phút đọc</span>
+                        <span><i class="fas fa-eye"></i> 4,320 lượt xem</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-featured-image">
+            <div class="post-featured-gradient database-bg">
+                <i class="fas fa-code"></i>
+            </div>
+        </div>
+
+        <div class="post-content">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="main-content">
+                        <p class="lead">Sau 3 năm học IT và làm các dự án thực tế, mình nhận ra có nhiều thứ trường không dạy nhưng cực kỳ quan trọng. Bài này tổng hợp 10 tips giúp bạn code tốt hơn, làm việc hiệu quả hơn! 💪</p>
+
+                        <h2>1. 🔍 Google-fu Là Kỹ Năng Quan Trọng Nhất</h2>
+                        
+                        <p>90% công việc của developer là... Google 😂 Nhưng phải Google đúng cách!</p>
+
+                        <h3>❌ Google Kiểu Newbie:</h3>
+                        <ul>
+                            <li>"node js error"</li>
+                            <li>"code không chạy"</li>
+                            <li>"fix lỗi javascript"</li>
+                        </ul>
+
+                        <h3>✅ Google Kiểu Pro:</h3>
+                        <ul>
+                            <li>"TypeError: Cannot read property 'map' of undefined" (Full error message)</li>
+                            <li>"discord.js v14 event handler not working" (Specific version + issue)</li>
+                            <li>"mongodb connection refused ECONNREFUSED site:stackoverflow.com" (Search specific site)</li>
+                        </ul>
+
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p><strong>Pro Tip:</strong> Thêm "site:stackoverflow.com" hoặc "site:github.com" để search targeted hơn!</p>
+                        </div>
+
+                        <h2>2. 📝 README.md Là Người Bạn Tốt Nhất</h2>
+
+                        <p>Mỗi project phải có README tốt! Sau 6 tháng bạn sẽ quên cách setup project của mình 😅</p>
+
+                        <h3>README Chuẩn Phải Có:</h3>
+                        <pre><code># Project Name
+
+## 📖 Mô Tả
+Giải thích ngắn gọn project làm gì
+
+## 🚀 Cài Đặt
+```bash
+npm install
+npm run dev
+```
+
+## ⚙️ Cấu Hình
+Copy `.env.example` thành `.env` và điền thông tin:
+- BOT_TOKEN=...
+- DATABASE_URL=...
+
+## 📂 Cấu Trúc
+```
+src/
+  ├── commands/
+  ├── events/
+  └── utils/
+```
+
+## 🐛 Known Issues
+- Issue #1: ...
+- Workaround: ...
+
+## 📝 License
+MIT</code></pre>
+
+                        <h2>3. 🎨 Git Commit Messages Phải Có Ý Nghĩa</h2>
+
+                        <h3>❌ Commit Messages Tệ:</h3>
+                        <pre><code>git commit -m "update"
+git commit -m "fix bug"
+git commit -m "asdasd"
+git commit -m "done"</code></pre>
+
+                        <h3>✅ Commit Messages Tốt:</h3>
+                        <pre><code>git commit -m "feat: add user authentication"
+git commit -m "fix: resolve memory leak in event handler"
+git commit -m "refactor: optimize database queries"
+git commit -m "docs: update API documentation"</code></pre>
+
+                        <h3>🎯 Convention:</h3>
+                        <ul>
+                            <li><code>feat:</code> - Feature mới</li>
+                            <li><code>fix:</code> - Fix bug</li>
+                            <li><code>refactor:</code> - Refactor code</li>
+                            <li><code>docs:</code> - Documentation</li>
+                            <li><code>style:</code> - Format code</li>
+                            <li><code>test:</code> - Tests</li>
+                        </ul>
+
+                        <h2>4. 🚫 .gitignore Ngay Từ Đầu</h2>
+
+                        <p>Đừng commit những thứ không cần thiết! Mình từng push file .env lên GitHub và phải regenerate tất cả tokens 😭</p>
+
+                        <h3>Node.js .gitignore Template:</h3>
+                        <pre><code># Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Build
+dist/
+build/</code></pre>
+
+                        <h2>5. 🔧 VS Code Extensions Phải Có</h2>
+
+                        <p>Những extensions này giúp mình code nhanh hơn 3x:</p>
+
+                        <div class="tips-grid">
+                            <div class="tip-card">
+                                <h4>ESLint</h4>
+                                <p>Bắt lỗi code realtime</p>
+                            </div>
+                            
+                            <div class="tip-card">
+                                <h4>Prettier</h4>
+                                <p>Auto format code đẹp</p>
+                            </div>
+                            
+                            <div class="tip-card">
+                                <h4>GitLens</h4>
+                                <p>Git history trong editor</p>
+                            </div>
+                            
+                            <div class="tip-card">
+                                <h4>Live Server</h4>
+                                <p>Preview HTML realtime</p>
+                            </div>
+
+                            <div class="tip-card">
+                                <h4>Error Lens</h4>
+                                <p>Hiển thị error inline</p>
+                            </div>
+
+                            <div class="tip-card">
+                                <h4>GitHub Copilot</h4>
+                                <p>AI code assistant</p>
+                            </div>
+                        </div>
+
+                        <h2>6. 💻 Terminal Shortcuts</h2>
+
+                        <p>Ngừng dùng chuột cho mọi thứ! Shortcuts giúp bạn nhanh hơn:</p>
+
+                        <h3>Windows/Linux:</h3>
+                        <ul>
+                            <li><code>Ctrl + C</code> - Stop process</li>
+                            <li><code>Ctrl + L</code> - Clear terminal</li>
+                            <li><code>Tab</code> - Auto-complete</li>
+                            <li><code>↑/↓</code> - Previous/next command</li>
+                            <li><code>Ctrl + R</code> - Search command history</li>
+                        </ul>
+
+                        <h3>Useful Commands:</h3>
+                        <pre><code># Clear terminal
+clear
+
+# View file content
+cat filename.txt
+
+# Find process by port
+netstat -ano | findstr :3000
+
+# Kill process
+taskkill /PID [pid] /F
+
+# Git shortcuts
+git status  →  git st (alias)
+git commit  →  git ci
+git branch  →  git br</code></pre>
+
+                        <h2>7. 🐛 Debug Đúng Cách</h2>
+
+                        <h3>❌ Console.log Everywhere:</h3>
+                        <pre><code>console.log('here 1');
+console.log('here 2');
+console.log('data:', data);
+console.log('user:', user);
+console.log('asdasd');</code></pre>
+
+                        <h3>✅ Dùng Debugger:</h3>
+                        <pre><code>// VS Code debugger
+// 1. Đặt breakpoint (click vào line number)
+// 2. F5 để start debug
+// 3. F10 step over, F11 step into
+
+// Chrome DevTools
+debugger; // Code sẽ pause ở đây
+
+// Console tips
+console.table(arrayOfObjects); // Hiển thị dạng table
+console.time('loop'); 
+// ... code ...
+console.timeEnd('loop'); // Đo thời gian execution</code></pre>
+
+                        <h2>8. 📚 Đọc Docs Trước Khi Hỏi</h2>
+
+                        <p>Mình biết docs đôi khi khô khan, nhưng nó luôn chính xác nhất! 📖</p>
+
+                        <h3>Quy trình giải quyết lỗi:</h3>
+                        <ol>
+                            <li>Đọc error message kỹ</li>
+                            <li>Google full error message</li>
+                            <li>Check official docs</li>
+                            <li>Search GitHub issues</li>
+                            <li>Hỏi trên Stack Overflow (với context đầy đủ)</li>
+                            <li>Hỏi trong Discord community</li>
+                        </ol>
+
+                        <blockquote>
+                            <p>"Đừng hỏi 'code này sao không chạy' mà không show code. Không ai có năng lực ngoại cảm cả!" 😅</p>
+                        </blockquote>
+
+                        <h2>9. 🔄 Refactor Thường Xuyên</h2>
+
+                        <p>Code working không có nghĩa là code tốt! Refactor để code dễ đọc, dễ maintain hơn.</p>
+
+                        <h3>Ví dụ Refactoring:</h3>
+
+                        <h4>Before (Messy):</h4>
+                        <pre><code>function calc(a, b, c) {
+    if (c == 1) {
+        return a + b;
+    } else if (c == 2) {
+        return a - b;
+    } else if (c == 3) {
+        return a * b;
+    } else {
+        return a / b;
+    }
+}</code></pre>
+
+                        <h4>After (Clean):</h4>
+                        <pre><code>const operations = {
+    add: (a, b) => a + b,
+    subtract: (a, b) => a - b,
+    multiply: (a, b) => a * b,
+    divide: (a, b) => a / b
+};
+
+function calculate(a, b, operation) {
+    return operations[operation]?.(a, b) ?? null;
+}
+
+// Usage
+calculate(10, 5, 'add');      // 15
+calculate(10, 5, 'multiply'); // 50</code></pre>
+
+                        <h2>10. 🎯 Learn By Doing</h2>
+
+                        <p>Đọc tutorial cả ngày mà không code = vô dụng! Học bằng cách làm project thực tế.</p>
+
+                        <h3>Roadmap Học Hiệu Quả:</h3>
+
+                        <div class="highlight-box">
+                            <p><strong>Tháng 1-2: Basics</strong></p>
+                            <ul>
+                                <li>HTML, CSS, JavaScript fundamentals</li>
+                                <li>Project: Portfolio website (như của mình đây!)</li>
+                            </ul>
+                        </div>
+
+                        <div class="highlight-box">
+                            <p><strong>Tháng 3-4: Backend</strong></p>
+                            <ul>
+                                <li>Node.js, Express, MongoDB</li>
+                                <li>Project: Simple REST API (Todo app, Notes app)</li>
+                            </ul>
+                        </div>
+
+                        <div class="highlight-box">
+                            <p><strong>Tháng 5-6: Integration</strong></p>
+                            <ul>
+                                <li>Discord Bot, Telegram Bot</li>
+                                <li>Project: Bot với database (như Ma Đạo Bot của mình)</li>
+                            </ul>
+                        </div>
+
+                        <div class="highlight-box">
+                            <p><strong>Tháng 7+: Specialize</strong></p>
+                            <ul>
+                                <li>Chọn direction: Frontend (React), Backend (APIs), DevOps, Mobile...</li>
+                                <li>Project: Cái gì bạn passionate nhất!</li>
+                            </ul>
+                        </div>
+
+                        <h2>💡 Bonus Tips</h2>
+
+                        <h3>11. Backup Code Thường Xuyên</h3>
+                        <ul>
+                            <li>Push lên GitHub mỗi ngày</li>
+                            <li>3-2-1 rule: 3 copies, 2 media types, 1 offsite</li>
+                        </ul>
+
+                        <h3>12. Học Từ Code Của Người Khác</h3>
+                        <ul>
+                            <li>Read source code của open-source projects</li>
+                            <li>Xem cách họ structure, handle errors, comment...</li>
+                        </ul>
+
+                        <h3>13. Join Communities</h3>
+                        <ul>
+                            <li>Discord servers (như Ma Đạo Community 😊)</li>
+                            <li>GitHub discussions</li>
+                            <li>Stack Overflow</li>
+                            <li>Dev.to, Reddit r/programming</li>
+                        </ul>
+
+                        <h3>14. Take Breaks!</h3>
+                        <p>Debug 3 tiếng không ra → Nghỉ 30 phút → Quay lại fix được trong 5 phút! 🤯</p>
+
+                        <blockquote>
+                            <p>"Sometimes the best debugging tool is a good night's sleep." - Anonymous</p>
+                        </blockquote>
+
+                        <h3>15. Don't Compare Yourself</h3>
+                        <p>Thấy người khác code giỏi hơn → Motivation. Không phải → Depression. Focus vào journey của bản thân! 🌱</p>
+
+                        <h2>🎓 Kết Luận</h2>
+
+                        <p>Những tips này mình học được sau nhiều đêm debug đến 4-5 giờ sáng, sau vô số lần "code chạy được rồi nhưng không biết tại sao", sau khi refactor lại code cũ và nghĩ "mình đã viết cái quái gì vậy?" 😂</p>
+
+                        <p>Development không chỉ là code. Nó là:</p>
+                        <ul>
+                            <li>✅ Problem solving</li>
+                            <li>✅ Research skills</li>
+                            <li>✅ Communication</li>
+                            <li>✅ Continuous learning</li>
+                            <li>✅ Patience (rất nhiều patience!)</li>
+                        </ul>
+
+                        <p>Keep coding, keep learning, keep building! 🚀</p>
+
+                        <div class="post-tags">
+                            <i class="fas fa-tags"></i>
+                            <span class="tag">Development</span>
+                            <span class="tag">Tips</span>
+                            <span class="tag">Best Practices</span>
+                            <span class="tag">Career</span>
+                        </div>
+
+                        <div class="post-share">
+                            <h4>Chia sẻ bài viết</h4>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                                <a href="#" class="share-btn twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                                <a href="#" class="share-btn linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="post-sidebar">
+                        <div class="sidebar-card author-card">
+                            <img src="assets/avatar.jpg" alt="Thanh Luân" class="author-image">
+                            <h3>Nguyễn Thanh Luân</h3>
+                            <p>Sinh viên IT năm 3 với đam mê coding và chia sẻ kiến thức! 🎓💻</p>
+                            <div class="author-social">
+                                <a href="https://facebook.com/LuanEm2709" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="https://github.com/Xiata279" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://discord.gg/NUh6Mf22" target="_blank"><i class="fab fa-discord"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3>Bài Viết Liên Quan</h3>
+                            <div class="related-posts">
+                                <a href="blog-nodejs-tips.html" class="related-post">
+                                    <div class="related-gradient code-bg">
+                                        <i class="fab fa-node-js blog-icon"></i>
+                                    </div>
+                                    <div class="related-info">
+                                        <h4>Node.js Tips & Tricks</h4>
+                                        <span>7 phút đọc</span>
+                                    </div>
+                                </a>
+                                <a href="blog-discord-bot.html" class="related-post">
+                                    <div class="related-gradient code-bg">
+                                        <i class="fas fa-robot blog-icon"></i>
+                                    </div>
+                                    <div class="related-info">
+                                        <h4>Discord Bot Development</h4>
+                                        <span>8 phút đọc</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3>Tags Phổ Biến</h3>
+                            <div class="tag-cloud">
+                                <a href="#" class="tag">Development</a>
+                                <a href="#" class="tag">Node.js</a>
+                                <a href="#" class="tag">Tips</a>
+                                <a href="#" class="tag">Best Practices</a>
+                                <a href="#" class="tag">Git</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Thanh Luân</h3>
+                    <p>Passionate Developer & Lifelong Learner</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên Kết</h3>
+                    <ul>
+                        <li><a href="index.html#home">Trang Chủ</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="index.html#contact">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Theo Dõi</h3>
+                    <div class="footer-social">
+                        <a href="https://github.com/Xiata279" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.gg/NUh6Mf22" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.tiktok.com/@LuanEm2709" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nguyễn Thanh Luân. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
