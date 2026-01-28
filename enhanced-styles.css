@@ -1,0 +1,471 @@
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #0066FF, #00D4FF);
+    border-radius: 2px;
+}
+
+/* Improved Section Badge */
+.section-badge {
+    position: relative;
+    padding-left: 30px;
+}
+
+.section-badge::before {
+    content: '✦';
+    position: absolute;
+    left: 8px;
+    color: #00D4FF;
+    font-size: 16px;
+}
+
+/* Enhanced Stats */
+.stat-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.stat-item:hover::before {
+    left: 100%;
+}
+
+.stat-icon {
+    position: relative;
+}
+
+.stat-icon::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 212, 255, 0.2);
+    border-radius: 50%;
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Skills Category Enhancement */
+.skills-category {
+    position: relative;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.skills-category:hover {
+    border-left-color: #0066FF;
+    transform: translateX(5px);
+}
+
+.category-header {
+    position: relative;
+    padding-left: 60px;
+}
+
+.category-header i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 212, 255, 0.1));
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.skills-category:hover .category-header i {
+    background: linear-gradient(135deg, #0066FF, #00D4FF);
+    color: white;
+    transform: translateY(-50%) rotate(360deg);
+}
+
+/* Skill Icon với badge effect */
+.skill-icon {
+    position: relative;
+}
+
+.skill-icon::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 8px;
+    height: 8px;
+    background: #00D4FF;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00D4FF;
+}
+
+/* Progress Bar Enhancement */
+.progress-bar {
+    position: relative;
+    background: linear-gradient(90deg, 
+        rgba(0, 102, 255, 0.05) 0%, 
+        rgba(0, 212, 255, 0.05) 100%);
+    border: 1px solid rgba(0, 102, 255, 0.1);
+}
+
+.skill-info h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-info h4::before {
+    content: '▸';
+    color: #0066FF;
+    font-size: 14px;
+}
+
+/* Soft Skills Grid Enhancement */
+.soft-skills h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.soft-skills h3 i {
+    color: #0066FF;
+    animation: brainPulse 3s ease-in-out infinite;
+}
+
+@keyframes brainPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.soft-skill-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.soft-skill-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0), rgba(0, 212, 255, 0.1));
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.soft-skill-item:hover::before {
+    opacity: 1;
+}
+
+.soft-skill-item i {
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 212, 255, 0.1));
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.soft-skill-item:hover i {
+    background: linear-gradient(135deg, #0066FF, #00D4FF);
+    color: white;
+    transform: rotateY(360deg);
+}
+
+/* Project Card Enhancement */
+.project-card {
+    position: relative;
+    border: 1px solid rgba(0, 102, 255, 0.1);
+}
+
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0066FF, #00D4FF);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover::after {
+    transform: scaleX(1);
+}
+
+/* Achievement Badge Enhancement */
+.achievement-badge {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.3);
+    animation: badgeFloat 3s ease-in-out infinite;
+}
+
+@keyframes badgeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Button Enhancement */
+.btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn i {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+    transform: translateX(5px);
+}
+
+.btn-primary i {
+    animation: buttonIconPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonIconPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Download CV Button Special Effect */
+a[download] {
+    position: relative;
+}
+
+a[download]::after {
+    content: '📄';
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+a[download]:hover::after {
+    right: -35px;
+    opacity: 1;
+}
+
+/* Social Links Enhancement */
+.social-links a {
+    position: relative;
+}
+
+.social-links a::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    background: rgba(0, 102, 255, 0.95);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover::after {
+    transform: translateX(-50%) scale(1);
+}
+
+/* Filter Buttons Enhancement */
+.filter-btn {
+    position: relative;
+}
+
+.filter-btn::before {
+    content: attr(data-filter);
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #0066FF;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.filter-btn.active::before {
+    content: '✓';
+    opacity: 1;
+}
+
+/* Contact Form Enhancement */
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    position: absolute;
+    top: -10px;
+    left: 50px;
+    background: var(--c);
+    padding: 0 10px;
+    color: var(--p);
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label {
+    opacity: 1;
+}
+
+/* Scroll Down Arrow Enhancement */
+.scroll-down a {
+    position: relative;
+}
+
+.scroll-down a::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(to bottom, transparent, #0066FF);
+    animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+/* Info Card Enhancement */
+.info-card {
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    border-left-color: #0066FF;
+    background: linear-gradient(90deg, rgba(0, 102, 255, 0.05), transparent);
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    .category-header {
+        padding-left: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .category-header i {
+        position: relative;
+        transform: none;
+        margin-bottom: 10px;
+    }
+    
+    .soft-skills h3 {
+        flex-direction: column;
+    }
+}
+
+/* Loading State for Images */
+img {
+    background: linear-gradient(90deg, 
+        rgba(0, 102, 255, 0.1) 0%, 
+        rgba(0, 212, 255, 0.1) 50%, 
+        rgba(0, 102, 255, 0.1) 100%);
+    background-size: 200% 100%;
+    animation: imageLoading 1.5s ease-in-out infinite;
+}
+
+img[src] {
+    animation: none;
+    background: none;
+}
+
+@keyframes imageLoading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .scroll-top,
+    .scroll-down,
+    .hero-buttons,
+    .social-links,
+    .projects-filter {
+        display: none !important;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+}
