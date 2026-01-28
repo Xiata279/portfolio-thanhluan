@@ -20,14 +20,14 @@ html {
 /* Premium Animated Mesh Gradient Background */
 body {
     font-family: 'Inter', sans-serif;
-    background: #0A192F;
+    background: linear-gradient(135deg, #0A192F 0%, #0d1f3d 25%, #112240 50%, #0d1f3d 75%, #0A192F 100%);
     color: var(--l);
     line-height: 1.6;
     position: relative;
     overflow-x: hidden;
 }
 
-/* Animated Mesh Gradient Layer */
+/* Enhanced Animated Mesh Gradient Layer */
 body::before {
     content: '';
     position: fixed;
@@ -36,34 +36,36 @@ body::before {
     width: 200%;
     height: 200%;
     background:
-        radial-gradient(circle at 20% 30%, rgba(0, 102, 255, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(0, 212, 255, 0.12) 0%, transparent 40%),
-        radial-gradient(circle at 40% 80%, rgba(147, 51, 234, 0.1) 0%, transparent 40%),
-        radial-gradient(circle at 90% 20%, rgba(0, 102, 255, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 10% 90%, rgba(0, 212, 255, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 60% 40%, rgba(0, 102, 255, 0.06) 0%, transparent 40%);
-    animation: meshRotate 30s ease-in-out infinite;
+        radial-gradient(circle at 20% 30%, rgba(0, 102, 255, 0.3) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(0, 212, 255, 0.25) 0%, transparent 30%),
+        radial-gradient(circle at 40% 80%, rgba(147, 51, 234, 0.22) 0%, transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(0, 255, 136, 0.15) 0%, transparent 30%),
+        radial-gradient(circle at 10% 90%, rgba(255, 0, 136, 0.12) 0%, transparent 30%),
+        radial-gradient(circle at 60% 40%, rgba(0, 212, 255, 0.18) 0%, transparent 30%),
+        radial-gradient(circle at 30% 60%, rgba(0, 102, 255, 0.15) 0%, transparent 30%),
+        radial-gradient(circle at 70% 10%, rgba(147, 51, 234, 0.1) 0%, transparent 30%);
+    animation: meshRotate 40s ease-in-out infinite;
     pointer-events: none;
     z-index: 0;
+    opacity: 0.9;
 }
 
 @keyframes meshRotate {
-
-    0%,
-    100% {
-        transform: translate(0, 0) rotate(0deg) scale(1);
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
     }
-
-    33% {
-        transform: translate(-5%, 5%) rotate(120deg) scale(1.1);
+    25% {
+        transform: rotate(5deg) scale(1.05);
     }
-
-    66% {
-        transform: translate(5%, -5%) rotate(240deg) scale(0.95);
+    50% {
+        transform: rotate(0deg) scale(1.1);
+    }
+    75% {
+        transform: rotate(-5deg) scale(1.05);
     }
 }
 
-/* Floating Orbs Layer */
+/* Enhanced Floating Orbs Layer */
 body::after {
     content: '';
     position: fixed;
@@ -72,10 +74,11 @@ body::after {
     width: 100%;
     height: 100%;
     background:
-        radial-gradient(circle at 15% 15%, rgba(0, 102, 255, 0.08) 0%, transparent 25%),
-        radial-gradient(circle at 85% 85%, rgba(0, 212, 255, 0.08) 0%, transparent 25%),
-        radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.05) 0%, transparent 30%);
-    animation: orbsFloat 25s ease-in-out infinite alternate;
+        radial-gradient(circle at 15% 15%, rgba(0, 102, 255, 0.15) 0%, transparent 20%),
+        radial-gradient(circle at 85% 85%, rgba(0, 212, 255, 0.15) 0%, transparent 20%),
+        radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.12) 0%, transparent 25%),
+        radial-gradient(circle at 70% 30%, rgba(0, 255, 136, 0.08) 0%, transparent 20%);
+    animation: orbsFloat 28s ease-in-out infinite alternate;
     pointer-events: none;
     z-index: 0;
 }
@@ -83,16 +86,21 @@ body::after {
 @keyframes orbsFloat {
     0% {
         transform: translate(0, 0) scale(1);
-        opacity: 1;
-    }
-
-    50% {
-        transform: translate(3%, -3%) scale(1.05);
         opacity: 0.8;
     }
 
+    33% {
+        transform: translate(4%, -4%) scale(1.08);
+        opacity: 1;
+    }
+
+    66% {
+        transform: translate(-4%, 4%) scale(0.92);
+        opacity: 0.9;
+    }
+
     100% {
-        transform: translate(-3%, 3%) scale(0.95);
+        transform: translate(2%, -2%) scale(1.05);
         opacity: 1;
     }
 }

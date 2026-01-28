@@ -7,7 +7,7 @@ let typingSpeed = 150;
 
 function type() {
     const currentPhrase = phrases[phraseIndex];
-    
+
     if (isDeleting) {
         typingText.textContent = currentPhrase.substring(0, charIndex - 1);
         charIndex--;
@@ -17,7 +17,7 @@ function type() {
         charIndex++;
         typingSpeed = 150;
     }
-    
+
     if (!isDeleting && charIndex === currentPhrase.length) {
         isDeleting = true;
         typingSpeed = 2000;
@@ -26,7 +26,7 @@ function type() {
         phraseIndex = (phraseIndex + 1) % phrases.length;
         typingSpeed = 500;
     }
-    
+
     setTimeout(type, typingSpeed);
 }
 
@@ -38,13 +38,13 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -84,12 +84,12 @@ const sections = document.querySelectorAll('section[id]');
 
 function highlightNav() {
     const scrollY = window.pageYOffset;
-    
+
     sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - 100;
         const sectionId = section.getAttribute('id');
-        
+
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             document.querySelector(`.nav-link[href*=${sectionId}]`)?.classList.add('active');
         } else {
@@ -102,10 +102,10 @@ window.addEventListener('scroll', highlightNav);
 
 // ========== Smooth Scroll ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             const offsetTop = target.offsetTop - 80;
             window.scrollTo({
@@ -123,11 +123,11 @@ let progressAnimated = false;
 function animateProgress() {
     const skillsSection = document.getElementById('skills');
     if (!skillsSection) return;
-    
+
     const skillsSectionTop = skillsSection.offsetTop;
     const skillsSectionHeight = skillsSection.offsetHeight;
     const scrollPosition = window.pageYOffset + window.innerHeight;
-    
+
     if (scrollPosition > skillsSectionTop + skillsSectionHeight / 3 && !progressAnimated) {
         progressBars.forEach(bar => {
             const progress = bar.getAttribute('data-progress');
@@ -143,13 +143,18 @@ window.addEventListener('scroll', animateProgress);
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 
+console.log('Filter buttons found:', filterBtns.length);
+console.log('Project cards found:', projectCards.length);
+
 filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+        console.log('Filter button clicked:', btn.getAttribute('data-filter'));
+
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        
+
         const filter = btn.getAttribute('data-filter');
-        
+
         projectCards.forEach(card => {
             if (filter === 'all' || card.getAttribute('data-category') === filter) {
                 card.style.display = 'block';
@@ -213,23 +218,23 @@ const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
-        
+
         if (!data.name || !data.email || !data.subject || !data.message) {
             showNotification('Vui lòng điền đầy đủ thông tin!', 'error');
             return;
         }
-        
+
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(data.email)) {
             showNotification('Email không hợp lệ!', 'error');
             return;
         }
-        
+
         showNotification('Đang gửi tin nhắn...', 'info');
-        
+
         setTimeout(() => {
             showNotification('Tin nhắn đã được gửi thành công!', 'success');
             contactForm.reset();
@@ -242,11 +247,11 @@ function showNotification(message, type = 'info') {
     if (existingNotification) {
         existingNotification.remove();
     }
-    
+
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
     notification.textContent = message;
-    
+
     notification.style.cssText = `
         position: fixed;
         top: 100px;
@@ -260,9 +265,9 @@ function showNotification(message, type = 'info') {
         animation: slideIn 0.3s ease;
         font-weight: 600;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         notification.style.animation = 'slideOut 0.3s ease';
         setTimeout(() => notification.remove(), 300);

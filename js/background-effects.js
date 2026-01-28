@@ -13,6 +13,8 @@ class BackgroundEffects {
         this.createGradientOrbs();
         this.createGridLines();
         this.createVignette();
+        this.createNoiseOverlay();
+        this.createFloatingParticles();
         this.initSpotlight();
     }
 
@@ -20,10 +22,12 @@ class BackgroundEffects {
         const container = document.createElement('div');
         container.className = 'stars-background';
 
-        // Create 50 random stars
-        for (let i = 0; i < 50; i++) {
+        // Create 80 random stars with different sizes
+        const starSizes = ['small', 'medium', 'large'];
+        for (let i = 0; i < 80; i++) {
             const star = document.createElement('div');
-            star.className = 'star';
+            const size = starSizes[Math.floor(Math.random() * starSizes.length)];
+            star.className = `star ${size}`;
             star.style.left = Math.random() * 100 + '%';
             star.style.top = Math.random() * 100 + '%';
             star.style.animationDelay = Math.random() * 3 + 's';
@@ -38,7 +42,9 @@ class BackgroundEffects {
         const orbs = [
             { class: 'orb-1' },
             { class: 'orb-2' },
-            { class: 'orb-3' }
+            { class: 'orb-3' },
+            { class: 'orb-4' },
+            { class: 'orb-5' }
         ];
 
         orbs.forEach(orbData => {
@@ -58,6 +64,29 @@ class BackgroundEffects {
         const vignette = document.createElement('div');
         vignette.className = 'vignette';
         document.body.appendChild(vignette);
+    }
+
+    createNoiseOverlay() {
+        const noise = document.createElement('div');
+        noise.className = 'noise-overlay';
+        document.body.appendChild(noise);
+    }
+
+    createFloatingParticles() {
+        const container = document.createElement('div');
+        container.className = 'floating-particles';
+
+        // Create 20 floating particles
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+            container.appendChild(particle);
+        }
+
+        document.body.appendChild(container);
     }
 
     initSpotlight() {
