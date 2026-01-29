@@ -11,8 +11,8 @@ class ContactForm {
     init() {
         if (!this.form) return;
 
-        // Initialize EmailJS
-        emailjs.init('AZlEslHQI6M8cqh6v'); // Public key
+        // Initialize EmailJS with correct public key
+        emailjs.init('oCLX80jQ7U-0e5Mgc');
 
         this.submitBtn = this.form.querySelector('button[type="submit"]');
         this.form.addEventListener('submit', (e) => this.handleSubmit(e));
