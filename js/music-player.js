@@ -9,12 +9,22 @@ class MusicPlayer {
         this.currentTrack = 0;
         this.player = null;
 
-        // Playlist - you can add your own tracks here
+        // Playlist - using local audio file
         this.playlist = [
             {
-                name: 'Lo-fi Chill',
+                name: 'Thay Đổi',
+                artist: 'Tez',
+                url: 'assets/nhac1.mp4'
+            },
+            {
+                name: 'Thay Đổi Đi',
+                artist: 'Hip Hop Beat',
+                url: 'assets/nhac1.mp4'
+            },
+            {
+                name: 'Thay Đổi',
                 artist: 'Ambient',
-                url: 'https://www.bensound.com/bensound-music/bensound-slowmotion.mp3'
+                url: 'assets/nhac1.mp4'
             }
         ];
 
@@ -27,10 +37,28 @@ class MusicPlayer {
         this.createAudioElement();
         this.attachEventListeners();
 
-        // Auto-restore previous state if user had music on
-        if (this.isPlaying) {
-            this.play();
-        }
+        // Attempt autoplay when page loads
+        this.attemptAutoplay();
+    }
+
+    attemptAutoplay() {
+        // Try to autoplay music after page loads
+        setTimeout(() => {
+            if (this.audio) {
+                // Set volume first
+                this.audio.volume = this.volume;
+
+                // Try to play
+                this.audio.play().then(() => {
+                    this.isPlaying = true;
+                    this.updateUI();
+                    this.showNotification('🎵 Nhạc đang phát!', 'success');
+                }).catch(() => {
+                    // Autoplay blocked by browser - user needs to click play
+                    this.showNotification('🎵 Click nút Play để phát nhạc!', 'info');
+                });
+            }
+        }, 500); // Wait 0.5s after page load - faster autoplay
     }
 
     createPlayer() {
