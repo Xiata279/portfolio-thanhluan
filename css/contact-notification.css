@@ -1,0 +1,93 @@
+/* Contact Form Notification Styles */
+
+.contact-notification {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    background: rgba(10, 25, 47, 0.95);
+    border-left: 4px solid #0066FF;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10000;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contact-notification i {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.contact-notification span {
+    color: #E6F1FF;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.contact-notification.success {
+    border-left-color: #00FF88;
+}
+
+.contact-notification.success i {
+    color: #00FF88;
+}
+
+.contact-notification.error {
+    border-left-color: #FF4444;
+}
+
+.contact-notification.error i {
+    color: #FF4444;
+}
+
+.contact-notification.warning {
+    border-left-color: #FFAA00;
+}
+
+.contact-notification.warning i {
+    color: #FFAA00;
+}
+
+.contact-notification.info {
+    border-left-color: #00D4FF;
+}
+
+.contact-notification.info i {
+    color: #00D4FF;
+}
+
+/* Loading button spinner */
+button .fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .contact-notification {
+        right: 15px;
+        left: 15px;
+        max-width: none;
+    }
+}
