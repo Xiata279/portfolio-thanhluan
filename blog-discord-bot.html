@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
     <link rel="stylesheet" href="blog-styles.css">
     <link rel="stylesheet" href="blog-post.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-container">
@@ -64,11 +67,15 @@
             <div class="container">
                 <div class="content-wrapper">
                     <div class="main-content">
-                        <p class="lead">Sau gần 2 năm phát triển Ma Đạo Bot phục vụ cộng đồng 3000+ thành viên, mình quyết định viết bài này để chia sẻ toàn bộ kinh nghiệm từ zero đến hero. Nếu bạn đang muốn tạo bot riêng cho server Discord của mình, bài viết này dành cho bạn!</p>
+                        <p class="lead">Sau gần 2 năm phát triển Ma Đạo Bot phục vụ cộng đồng 3000+ thành viên, mình
+                            quyết định viết bài này để chia sẻ toàn bộ kinh nghiệm từ zero đến hero. Nếu bạn đang muốn
+                            tạo bot riêng cho server Discord của mình, bài viết này dành cho bạn!</p>
 
                         <h2>🎯 Tại sao nên học làm Discord Bot?</h2>
-                        <p>Hồi đầu năm 2023, mình chỉ là một sinh viên IT bình thường, biết chút ít JavaScript nhưng chưa làm dự án thực tế nào. Khi quyết định tạo Ma Đạo Community, mình nhận ra cần một bot để:</p>
-                        
+                        <p>Hồi đầu năm 2023, mình chỉ là một sinh viên IT bình thường, biết chút ít JavaScript nhưng
+                            chưa làm dự án thực tế nào. Khi quyết định tạo Ma Đạo Community, mình nhận ra cần một bot
+                            để:</p>
+
                         <ul>
                             <li><strong>Tự động hóa</strong> - Welcome members mới, auto-role, moderation</li>
                             <li><strong>Tăng engagement</strong> - Mini game, economy system, leveling</li>
@@ -79,25 +86,29 @@
                         <p>Và quan trọng nhất: <em>học được một skill thực tế siêu hữu ích!</em> 💪</p>
 
                         <h2>⚙️ Setup môi trường (15 phút)</h2>
-                        
+
                         <h3>Bước 1: Cài đặt Node.js</h3>
-                        <p>Download Node.js từ <a href="https://nodejs.org" target="_blank">nodejs.org</a> (khuyên dùng bản LTS). Kiểm tra cài đặt thành công:</p>
-                        
+                        <p>Download Node.js từ <a href="https://nodejs.org" target="_blank">nodejs.org</a> (khuyên dùng
+                            bản LTS). Kiểm tra cài đặt thành công:</p>
+
                         <pre><code>node --version
 npm --version</code></pre>
 
                         <h3>Bước 2: Tạo Discord Application</h3>
-                        <p>Vào <a href="https://discord.com/developers/applications" target="_blank">Discord Developer Portal</a>:</p>
+                        <p>Vào <a href="https://discord.com/developers/applications" target="_blank">Discord Developer
+                                Portal</a>:</p>
                         <ol>
                             <li>Click "New Application", đặt tên bot (ví dụ: "Ma Đạo Bot")</li>
                             <li>Vào tab <strong>Bot</strong> → "Add Bot" → "Yes, do it!"</li>
                             <li>Copy <strong>Token</strong> (giữ bí mật, đừng share lên GitHub!)</li>
-                            <li>Bật <strong>Privileged Gateway Intents</strong>: Presence, Server Members, Message Content</li>
+                            <li>Bật <strong>Privileged Gateway Intents</strong>: Presence, Server Members, Message
+                                Content</li>
                         </ol>
 
                         <div class="info-box">
                             <i class="fas fa-exclamation-triangle"></i>
-                            <p><strong>Lưu ý:</strong> Token giống như mật khẩu của bot. Nếu bị lộ, hacker có thể kiểm soát bot của bạn. Luôn dùng file .env và thêm vào .gitignore!</p>
+                            <p><strong>Lưu ý:</strong> Token giống như mật khẩu của bot. Nếu bị lộ, hacker có thể kiểm
+                                soát bot của bạn. Luôn dùng file .env và thêm vào .gitignore!</p>
                         </div>
 
                         <h3>Bước 3: Khởi tạo project</h3>
@@ -111,9 +122,9 @@ npm install discord.js dotenv</code></pre>
 CLIENT_ID=your_client_id</code></pre>
 
                         <h2>🚀 Code bot đầu tiên (30 phút)</h2>
-                        
+
                         <p>Tạo file <code>index.js</code>:</p>
-                        
+
                         <pre><code>require('dotenv').config();
 const { Client, GatewayIntentBits, Events } = require('discord.js');
 
@@ -159,10 +170,14 @@ client.login(process.env.TOKEN);</code></pre>
 
                         <h2>🎮 Case Study: Ma Đạo Ticket System</h2>
 
-                        <p>Một trong những dự án mình tự hào nhất là <strong>Ma Đạo Ticket Bot</strong> - hệ thống quản lý ticket cho Ma Đạo Store. Bạn có thể xem source code tại <a href="https://github.com/Xiata279/MaDao-Ticket-NodeJS" target="_blank">GitHub của mình</a>! 🔗</p>
+                        <p>Một trong những dự án mình tự hào nhất là <strong>Ma Đạo Ticket Bot</strong> - hệ thống quản
+                            lý ticket cho Ma Đạo Store. Bạn có thể xem source code tại <a
+                                href="https://github.com/Xiata279/MaDao-Ticket-NodeJS" target="_blank">GitHub của
+                                mình</a>! 🔗</p>
 
                         <h3>💡 Ý tưởng ra đời</h3>
-                        <p>Hồi đó Ma Đạo Store bán các item in-game, nhận support từ customers qua DM loạn xà ngầu. Mình và chez1s quyết định làm một hệ thống ticket chuyên nghiệp như các trang web lớn! 🎯</p>
+                        <p>Hồi đó Ma Đạo Store bán các item in-game, nhận support từ customers qua DM loạn xà ngầu. Mình
+                            và chez1s quyết định làm một hệ thống ticket chuyên nghiệp như các trang web lớn! 🎯</p>
 
                         <div class="info-box">
                             <i class="fas fa-lightbulb"></i>
@@ -247,8 +262,9 @@ client.on(Events.MessageCreate, message => {
 });</code></pre>
 
                         <h2>💾 Database: MongoDB hay SQL?</h2>
-                        
-                        <p>Sau khi Ma Đạo Community có 1000+ members, mình phải chuyển từ lưu data tạm trong Map sang database thật sự. Dựa trên kinh nghiệm:</p>
+
+                        <p>Sau khi Ma Đạo Community có 1000+ members, mình phải chuyển từ lưu data tạm trong Map sang
+                            database thật sự. Dựa trên kinh nghiệm:</p>
 
                         <div class="comparison-table">
                             <h4>MongoDB (mình đang dùng)</h4>
@@ -279,14 +295,15 @@ client.on(Events.MessageCreate, message => {
                             </ul>
                         </div>
 
-                        <p><strong>Kết luận:</strong> Với Discord Bot quy mô nhỏ/vừa (<5000 users), mình recommend <strong>MongoDB</strong>. Nếu làm bot lớn với nhiều tính năng phức tạp, thì SQL.</p>
+                        <p><strong>Kết luận:</strong> Với Discord Bot quy mô nhỏ/vừa (<5000 users), mình recommend
+                                <strong>MongoDB</strong>. Nếu làm bot lớn với nhiều tính năng phức tạp, thì SQL.</p>
 
                         <h2>🚀 Deploy bot lên Cloud</h2>
 
                         <p>Bot chỉ chạy khi máy tính bạn bật. Để bot online 24/7, cần host lên cloud:</p>
 
                         <h3>Option 1: Heroku (Đơn giản nhất - Free tier bị khai tử rồi 😢)</h3>
-                        
+
                         <h3>Option 2: Railway.app (Mình đang dùng)</h3>
                         <ol>
                             <li>Push code lên GitHub</li>
@@ -320,21 +337,24 @@ client.on(Events.MessageCreate, message => {
                             <div class="tip-card">
                                 <i class="fas fa-lightbulb"></i>
                                 <h4>Bắt đầu nhỏ</h4>
-                                <p>Đừng làm quá nhiều features ngay từ đầu. Mình bắt đầu chỉ với welcome message và prefix commands, rồi mới thêm dần.</p>
+                                <p>Đừng làm quá nhiều features ngay từ đầu. Mình bắt đầu chỉ với welcome message và
+                                    prefix commands, rồi mới thêm dần.</p>
                             </div>
-                            
+
                             <div class="tip-card">
                                 <i class="fas fa-code"></i>
                                 <h4>Tổ chức code tốt</h4>
-                                <p>Dùng command handler từ đầu. Tách commands ra từng file riêng, không nhét hết vào index.js.</p>
+                                <p>Dùng command handler từ đầu. Tách commands ra từng file riêng, không nhét hết vào
+                                    index.js.</p>
                             </div>
-                            
+
                             <div class="tip-card">
                                 <i class="fas fa-book"></i>
                                 <h4>Đọc docs</h4>
-                                <p>Discord.js guide và documentation cực kỳ chi tiết. Mọi thứ bạn cần đều có trong đó.</p>
+                                <p>Discord.js guide và documentation cực kỳ chi tiết. Mọi thứ bạn cần đều có trong đó.
+                                </p>
                             </div>
-                            
+
                             <div class="tip-card">
                                 <i class="fas fa-users"></i>
                                 <h4>Join community</h4>
@@ -343,19 +363,25 @@ client.on(Events.MessageCreate, message => {
                         </div>
 
                         <h2>🔗 Resources hữu ích</h2>
-                        
+
                         <ul>
-                            <li>📖 <a href="https://discord.js.org" target="_blank">Discord.js Documentation</a> - Bible của Discord bot dev</li>
-                            <li>🎥 <a href="https://www.youtube.com/@Computerphile" target="_blank">YouTube Tutorials</a> - Visual learner thích hợp</li>
-                            <li>💬 <a href="https://discord.gg/djs" target="_blank">Discord.js Discord Server</a> - Hỏi đáp trực tiếp</li>
-                            <li>🌐 <a href="https://github.com/discordjs/guide" target="_blank">Discord.js Guide</a> - Step by step guide</li>
+                            <li>📖 <a href="https://discord.js.org" target="_blank">Discord.js Documentation</a> - Bible
+                                của Discord bot dev</li>
+                            <li>🎥 <a href="https://www.youtube.com/@Computerphile" target="_blank">YouTube
+                                    Tutorials</a> - Visual learner thích hợp</li>
+                            <li>💬 <a href="https://discord.gg/djs" target="_blank">Discord.js Discord Server</a> - Hỏi
+                                đáp trực tiếp</li>
+                            <li>🌐 <a href="https://github.com/discordjs/guide" target="_blank">Discord.js Guide</a> -
+                                Step by step guide</li>
                         </ul>
 
                         <h2>💬 Kết luận</h2>
 
-                        <p>Làm Discord Bot là một trong những project tốt nhất mình làm lúc là sinh viên. Nó vừa practical (phục vụ cộng đồng thật), vừa học được nhiều thứ, lại còn fun nữa!</p>
+                        <p>Làm Discord Bot là một trong những project tốt nhất mình làm lúc là sinh viên. Nó vừa
+                            practical (phục vụ cộng đồng thật), vừa học được nhiều thứ, lại còn fun nữa!</p>
 
-                        <p>Nếu bạn đang học IT và chưa biết làm dự án gì, mình khuyên là làm thử Discord Bot. Start small, learn by doing, và đừng ngại hỏi community khi gặp khó khăn.</p>
+                        <p>Nếu bạn đang học IT và chưa biết làm dự án gì, mình khuyên là làm thử Discord Bot. Start
+                            small, learn by doing, và đừng ngại hỏi community khi gặp khó khăn.</p>
 
                         <p><strong>Good luck và happy coding! 🚀</strong></p>
 
@@ -422,6 +448,9 @@ client.on(Events.MessageCreate, message => {
         </div>
     </footer>
 
+    <script src="js/config.js"></script>
+    <script src="js/blog-reading-progress.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

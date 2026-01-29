@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
     <link rel="stylesheet" href="blog-styles.css">
     <link rel="stylesheet" href="blog-post.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-container">
@@ -64,7 +67,9 @@
             <div class="container">
                 <div class="content-wrapper">
                     <div class="main-content">
-                        <p class="lead">Sau 2 năm làm việc với Node.js qua các dự án Discord Bot, backend API, và automation tools, mình đã tích lũy được khá nhiều tips hữu ích. Bài này mình sẽ chia sẻ những trick thực tế giúp code Node.js hiệu quả hơn! 🚀</p>
+                        <p class="lead">Sau 2 năm làm việc với Node.js qua các dự án Discord Bot, backend API, và
+                            automation tools, mình đã tích lũy được khá nhiều tips hữu ích. Bài này mình sẽ chia sẻ
+                            những trick thực tế giúp code Node.js hiệu quả hơn! 🚀</p>
 
                         <h2>🎯 Tại sao Node.js?</h2>
                         <p>Trước khi vào tips, mình muốn nói tại sao Node.js lại phổ biến:</p>
@@ -97,7 +102,8 @@ const dbUrl = process.env.MONGODB_URL;
 
                         <div class="info-box">
                             <i class="fas fa-exclamation-triangle"></i>
-                            <p><strong>Pro tip:</strong> Thêm <code>.env</code> vào <code>.gitignore</code>! Mình từng push token lên GitHub và bị leak 😅</p>
+                            <p><strong>Pro tip:</strong> Thêm <code>.env</code> vào <code>.gitignore</code>! Mình từng
+                                push token lên GitHub và bị leak 😅</p>
                         </div>
 
                         <h3>2. Error Handling đúng cách</h3>
@@ -187,7 +193,8 @@ async function fetchAllData() {
 }</code></pre>
 
                         <blockquote>
-                            <p><strong>Real example:</strong> Trong Ma Đạo Bot, mình dùng Promise.all() để fetch data từ 5 APIs khác nhau. Giảm thời gian từ 10s xuống còn 2s! 🚀</p>
+                            <p><strong>Real example:</strong> Trong Ma Đạo Bot, mình dùng Promise.all() để fetch data từ
+                                5 APIs khác nhau. Giảm thời gian từ 10s xuống còn 2s! 🚀</p>
                         </blockquote>
 
                         <h3>5. Module Pattern đúng chuẩn</h3>
@@ -402,7 +409,8 @@ app.post('/users',
 
                         <div class="highlight-box">
                             <h3>Lesson 1: Memory Leaks</h3>
-                            <p>Ma Đạo Bot từng bị crash mỗi 2-3 ngày. Nguyên nhân: event listeners không được cleanup! 😅</p>
+                            <p>Ma Đạo Bot từng bị crash mỗi 2-3 ngày. Nguyên nhân: event listeners không được cleanup!
+                                😅</p>
                             <pre><code>// ❌ Memory leak
 setInterval(() => {
     client.on('message', handler); // Listener mới mỗi 1s!
@@ -449,7 +457,8 @@ process.on('uncaughtException', (error) => {
 
                         <h2>🎯 Kết Luận</h2>
 
-                        <p>Node.js rất mạnh mẽ nhưng cũng dễ "bắn vào chân mình" nếu không cẩn thận! Những tips này mình học được qua 2 năm làm việc và... vô số lần debug đến 3-4 giờ sáng 😂</p>
+                        <p>Node.js rất mạnh mẽ nhưng cũng dễ "bắn vào chân mình" nếu không cẩn thận! Những tips này mình
+                            học được qua 2 năm làm việc và... vô số lần debug đến 3-4 giờ sáng 😂</p>
 
                         <p>Remember:</p>
                         <ul>
@@ -488,7 +497,8 @@ process.on('uncaughtException', (error) => {
                             <h3>Nguyễn Thanh Luân</h3>
                             <p>Full-stack Developer với 2+ năm kinh nghiệm Node.js. Founder Ma Đạo Community! 💻</p>
                             <div class="author-social">
-                                <a href="https://facebook.com/LuanEm2709" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="https://facebook.com/LuanEm2709" target="_blank"><i
+                                        class="fab fa-facebook"></i></a>
                                 <a href="https://github.com/Xiata279" target="_blank"><i class="fab fa-github"></i></a>
                                 <a href="https://discord.gg/NUh6Mf22" target="_blank"><i class="fab fa-discord"></i></a>
                             </div>
@@ -564,6 +574,9 @@ process.on('uncaughtException', (error) => {
         </div>
     </footer>
 
+    <script src="js/config.js"></script>
+    <script src="js/blog-reading-progress.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

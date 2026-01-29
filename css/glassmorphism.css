@@ -1,0 +1,327 @@
+/* ========================================
+   GLASSMORPHISM EFFECTS - GUNS.LOL STYLE
+   Premium glass-morph styling for cards
+   ======================================== */
+
+/* Base glassmorphism class */
+.glass-card {
+    background: linear-gradient(135deg,
+            rgba(10, 25, 47, 0.7),
+            rgba(17, 34, 64, 0.6));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+    background: linear-gradient(135deg,
+            rgba(10, 25, 47, 0.8),
+            rgba(17, 34, 64, 0.75));
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow:
+        0 12px 48px rgba(0, 102, 255, 0.2),
+        0 0 20px rgba(0, 212, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Apply to project cards */
+.project-card {
+    background: linear-gradient(135deg,
+            rgba(10, 25, 47, 0.75),
+            rgba(17, 34, 64, 0.65)) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(0, 212, 255, 0.1),
+            transparent);
+    transition: left 0.6s ease;
+}
+
+.project-card:hover::before {
+    left: 100%;
+}
+
+.project-card:hover {
+    border-color: rgba(0, 212, 255, 0.35);
+    box-shadow:
+        0 12px 48px rgba(0, 102, 255, 0.25),
+        0 0 30px rgba(0, 212, 255, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Blog cards */
+.blog-card {
+    background: linear-gradient(135deg,
+            rgba(10, 25, 47, 0.8),
+            rgba(17, 34, 64, 0.7)) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.blog-card:hover {
+    border-color: rgba(0, 212, 255, 0.35);
+    box-shadow:
+        0 12px 48px rgba(0, 102, 255, 0.25),
+        0 0 25px rgba(0, 212, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Achievement cards */
+.achievement-card {
+    background: linear-gradient(135deg,
+            rgba(10, 25, 47, 0.75),
+            rgba(17, 34, 64, 0.65)) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.achievement-card:hover {
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow:
+        0 12px 40px rgba(0, 102, 255, 0.2),
+        0 0 20px rgba(0, 212, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Skill cards */
+.skill-card,
+.skill-item {
+    background: linear-gradient(135deg,
+            rgba(10, 25, 47, 0.7),
+            rgba(17, 34, 64, 0.6)) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 212, 255, 0.12);
+    box-shadow:
+        0 6px 24px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.skill-card:hover,
+.skill-item:hover {
+    border-color: rgba(0, 212, 255, 0.25);
+    box-shadow:
+        0 8px 32px rgba(0, 102, 255, 0.2),
+        0 0 15px rgba(0, 212, 255, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+}
+
+/* Info cards */
+.info-card {
+    background: linear-gradient(135deg,
+            rgba(10, 25, 47, 0.75),
+            rgba(17, 34, 64, 0.65)) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Navbar glassmorphism */
+.navbar.scrolled {
+    background: linear-gradient(135deg,
+            rgba(10, 25, 47, 0.9),
+            rgba(17, 34, 64, 0.85)) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.15);
+    box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Section headers with glass effect */
+.section-header {
+    position: relative;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(0, 212, 255, 0.6),
+            transparent);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+
+/* Glow effect for interactive elements */
+.glow-on-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.glow-on-hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(0, 212, 255, 0.3) 0%,
+            transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    pointer-events: none;
+}
+
+.glow-on-hover:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Buttons with glassmorphism */
+.btn-primary,
+.btn-secondary {
+    background: linear-gradient(135deg,
+            rgba(0, 102, 255, 0.15),
+            rgba(0, 212, 255, 0.15)) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    box-shadow:
+        0 4px 16px rgba(0, 102, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before,
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    border-color: rgba(0, 212, 255, 0.5);
+    box-shadow:
+        0 6px 24px rgba(0, 212, 255, 0.4),
+        0 0 20px rgba(0, 212, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Frosted glass overlay for modals */
+.glass-overlay {
+    background: rgba(10, 25, 47, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+/* Shimmer effect for loading states */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.glass-shimmer {
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(0, 212, 255, 0.1) 50%,
+            transparent 100%);
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+
+    .glass-card,
+    .project-card,
+    .blog-card,
+    .achievement-card,
+    .skill-card,
+    .info-card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    .navbar.scrolled {
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+    }
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+
+    .glass-card,
+    .project-card,
+    .blog-card,
+    .achievement-card,
+    .skill-card,
+    .info-card {
+        background: linear-gradient(135deg,
+                rgba(10, 25, 47, 0.95),
+                rgba(17, 34, 64, 0.9));
+    }
+
+    .navbar.scrolled {
+        background: linear-gradient(135deg,
+                rgba(10, 25, 47, 0.98),
+                rgba(17, 34, 64, 0.95));
+    }
+}

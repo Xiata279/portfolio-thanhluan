@@ -1,35 +1,20 @@
-// ========================================
-// TERMINAL INTRO ANIMATION - PREMIUM VERSION
-// Hiệu ứng terminal boot chuyên nghiệp với tiếng Việt tự nhiên
-// ========================================
+// Terminal Intro Animation
+// Professional boot sequence effect
 
 class TerminalIntro {
     constructor() {
         this.terminal = null;
         this.output = null;
         this.commands = [
-            { text: '◆ Đang khởi động hệ thống portfolio...', delay: 100, icon: '◆' },
-            { text: '◆ Đang tải thông tin cá nhân của Luân...', delay: 300, icon: '◆' },
-            { text: '  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100%', delay: 500, progress: true },
-            { text: '', delay: 200 },
-            { text: '◈ Đang kết nối với GitHub...', delay: 200, icon: '◈' },
-            { text: '  ✦ Kết nối thành công!', delay: 300, success: true },
-            { text: '', delay: 200 },
-            { text: '◈ Đang tải kỹ năng lập trình...', delay: 200, icon: '◈' },
-            { text: '  ⬢ Node.js & Discord.js ━━━━━ 95%', delay: 150, skill: true },
-            { text: '  ⬢ JavaScript & TypeScript ━━━━━ 92%', delay: 150, skill: true },
-            { text: '  ⬢ HTML/CSS & React ━━━━━ 88%', delay: 150, skill: true },
-            { text: '', delay: 200 },
-            { text: '◈ Đang quét các dự án...', delay: 200, icon: '◈' },
-            { text: '  ✦ Tìm thấy 8 dự án đang hoạt động', delay: 300, success: true },
-            { text: '', delay: 200 },
-            { text: '◈ Đang tải thông tin Ma Đạo Community...', delay: 200, icon: '◈' },
-            { text: '  ⚡ 3000+ thành viên đang online', delay: 200, success: true },
-            { text: '  ⚡ 50K+ người theo dõi trên TikTok', delay: 200, success: true },
-            { text: '', delay: 300 },
-            { text: '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', delay: 200, divider: true },
-            { text: '✨ Hệ thống đã sẵn sàng! Chào mừng bạn đến với portfolio của Luân', delay: 400, highlight: true },
-            { text: '💡 Tip: Nhấn SPACE hoặc click để bỏ qua animation', delay: 200, hint: true }
+            { text: 'Initializing portfolio system...', delay: 100, icon: '◆' },
+            { text: '  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100%', delay: 400, progress: true },
+            { text: '', delay: 150 },
+            { text: 'Loading profile data...', delay: 200, icon: '◈' },
+            { text: '  ✓ Nguyen Thanh Luan', delay: 250, success: true },
+            { text: '  ✓ Software Engineer & Content Creator', delay: 250, success: true },
+            { text: '', delay: 150 },
+            { text: 'System ready.', delay: 300, highlight: true },
+            { text: 'Welcome to my portfolio.', delay: 400, hint: true }
         ];
         this.currentIndex = 0;
         this.isSkipped = false;
@@ -60,20 +45,9 @@ class TerminalIntro {
                     </div>
                 </div>
                 <div class="terminal-body">
-                    <div class="terminal-welcome">
-                        <div class="ascii-art">
-╔═══════════════════════════════════════════════════════╗
-║  ██╗     ██╗   ██╗ █████╗ ███╗   ██╗    ███████╗███╗   ███╗ ║
-║  ██║     ██║   ██║██╔══██╗████╗  ██║    ██╔════╝████╗ ████║ ║
-║  ██║     ██║   ██║███████║██╔██╗ ██║    █████╗  ██╔████╔██║ ║
-║  ██║     ██║   ██║██╔══██║██║╚██╗██║    ██╔══╝  ██║╚██╔╝██║ ║
-║  ███████╗╚██████╔╝██║  ██║██║ ╚████║    ███████╗██║ ╚═╝ ██║ ║
-║  ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝    ╚══════╝╚═╝     ╚═╝ ║
-╚═══════════════════════════════════════════════════════╝
-                    </div>
                     <div class="terminal-output"></div>
                     <div class="terminal-skip">
-                        <span class="skip-icon">⚡</span>
+                        <span class="skip-icon"></span>
                         <span>Nhấn SPACE hoặc click để bỏ qua</span>
                     </div>
                 </div>

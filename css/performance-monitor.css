@@ -1,0 +1,144 @@
+/* Performance Monitor Styles */
+.perf-monitor {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(17, 34, 64, 0.95);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 12px;
+    padding: 0;
+    min-width: 200px;
+    font-family: 'Courier New', monospace;
+    z-index: 9999;
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.perf-monitor.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: auto;
+}
+
+.perf-header {
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 212, 255, 0.2));
+    padding: 10px 15px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: grab;
+    user-select: none;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.perf-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #00d4ff;
+    letter-spacing: 0.5px;
+}
+
+.perf-close {
+    background: none;
+    border: none;
+    color: #8892b0;
+    font-size: 20px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s;
+    padding: 0;
+    line-height: 1;
+}
+
+.perf-close:hover {
+    background: rgba(255, 68, 68, 0.2);
+    color: #ff4444;
+    transform: rotate(90deg);
+}
+
+.perf-stats {
+    padding: 15px;
+}
+
+.perf-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(136, 146, 176, 0.1);
+}
+
+.perf-stat:last-child {
+    border-bottom: none;
+}
+
+.perf-label {
+    font-size: 11px;
+    color: #8892b0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.perf-value {
+    font-size: 14px;
+    font-weight: bold;
+    color: #00ff88;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 10px currentColor;
+}
+
+/* Hint tooltip for first-time users */
+.perf-monitor::after {
+    content: 'Press Ctrl+Shift+P to toggle';
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 102, 255, 0.9);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 10px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+
+.perf-monitor.visible::after {
+    animation: hintFadeIn 0.5s 2s forwards;
+}
+
+@keyframes hintFadeIn {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .perf-monitor {
+        top: 10px;
+        right: 10px;
+        min-width: 160px;
+        font-size: 11px;
+    }
+
+    .perf-stats {
+        padding: 10px;
+    }
+
+    .perf-stat {
+        padding: 6px 0;
+    }
+}

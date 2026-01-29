@@ -43,8 +43,12 @@ const CONFIG = {
         easterEggs: true,
         voiceCommands: false, // Experimental
         matrixRain: false,
-        githubStats: true,
-        visitorCounter: true
+        githubStats: false,          // Disabled to avoid fake fallback data
+        visitorCounter: true,
+        musicPlayer: true,           // NEW: Ambient music player
+        glassmorphism: true,         // NEW: Glass-morph effects
+        visualEffects: true,         // NEW: Click ripples, parallax
+        immersiveMode: true          // NEW: Immersive mode toggle
     },
 
     // API endpoints
