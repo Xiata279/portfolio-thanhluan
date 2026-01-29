@@ -1,5 +1,4 @@
-// Ambient Music Player
-// Background music with controls
+// Music player with background ambient music
 
 class MusicPlayer {
     constructor() {
@@ -9,7 +8,7 @@ class MusicPlayer {
         this.currentTrack = 0;
         this.player = null;
 
-        // Playlist - using local audio file
+        // Music playlist
         this.playlist = [
             {
                 name: 'Thay Đổi',
@@ -42,7 +41,7 @@ class MusicPlayer {
     }
 
     attemptAutoplay() {
-        // Try to autoplay music after page loads
+        // Auto-play music after page loads
         setTimeout(() => {
             if (this.audio) {
                 // Set volume first
@@ -58,7 +57,7 @@ class MusicPlayer {
                     this.showNotification('🎵 Click nút Play để phát nhạc!', 'info');
                 });
             }
-        }, 500); // Wait 0.5s after page load - faster autoplay
+        }, 500);
     }
 
     createPlayer() {

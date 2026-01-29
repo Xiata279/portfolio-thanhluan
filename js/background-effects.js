@@ -1,5 +1,4 @@
-// Background Effects - Mystical Cosmic Edition
-// Creates immersive cosmic atmosphere with nebula, aurora, and shooting stars
+// Background effects - cosmic theme
 
 class BackgroundEffects {
     constructor() {
@@ -25,7 +24,7 @@ class BackgroundEffects {
         const container = document.createElement('div');
         container.className = 'stars-background';
 
-        // Enhanced: 150 stars with cosmic colors
+        // 150 stars with cosmic colors
         const starSizes = ['small', 'medium', 'large'];
         const starColors = ['', 'cosmic-cyan', 'cosmic-purple', 'cosmic-pink'];
 
@@ -143,7 +142,6 @@ class BackgroundEffects {
         const container = document.createElement('div');
         container.className = 'floating-particles';
 
-        // 30 floating particles
         for (let i = 0; i < 30; i++) {
             const particle = document.createElement('div');
             particle.className = 'particle';
