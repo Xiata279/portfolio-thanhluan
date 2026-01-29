@@ -32,8 +32,8 @@ class ContactForm {
         try {
             // Send email via EmailJS
             await emailjs.sendForm(
-                'service_tbgvmpj',  // Service ID
-                'template_vgcl0oc',  // Template ID - bạn cần tạo template trên EmailJS
+                'service_tbgvmpj',
+                'template_heik4ow',  // User's template ID
                 this.form
             );
 
