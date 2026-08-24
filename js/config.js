@@ -39,8 +39,8 @@ const CONFIG = {
     // Feature flags
     features: {
         terminalIntro: false,
-        particleCursor: false,
-        easterEggs: false,
+        particleCursor: true,
+        easterEggs: true,
         voiceCommands: false,
         matrixRain: false,
         githubStats: true,
@@ -48,7 +48,7 @@ const CONFIG = {
         musicPlayer: false,
         glassmorphism: true,
         visualEffects: true,
-        immersiveMode: false
+        immersiveMode: true
     },
 
     // API endpoints

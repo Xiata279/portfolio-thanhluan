@@ -11,7 +11,6 @@ class VisualEffects {
     init() {
         this.addClickRipples();
         this.addSmoothScroll();
-        this.addParallaxEffect();
         this.addHoverGlow();
     }
 
@@ -150,12 +149,6 @@ effectsStyles.textContent = `
     /* Smooth scroll indicator */
     html {
         scroll-behavior: smooth;
-    }
-
-    /* Parallax container */
-    .hero {
-        will-change: transform, opacity;
-        transition: transform 0.1s ease-out, opacity 0.1s ease-out;
     }
 
     /* Hover glow effect using CSS variables */
