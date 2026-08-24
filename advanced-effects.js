@@ -127,7 +127,7 @@ console.log('%c╔════════════════════�
 console.log('%c║   🚀 NGUYỄN THÀNH LUÂN - SOFTWARE ENGINEER 🚀        ║', 'color: #00D4FF; font-weight: bold;');
 console.log('%c║                                                       ║', 'color: #0066FF;');
 console.log('%c║   📧 nguyenthanhluan.270924@gmail.com               ║', 'color: #E6F1FF;');
-console.log('%c║   🔗 github.com/Xiata279                            ║', 'color: #E6F1FF;');
+console.log('%c║   🔗 github.com/luanem2709                            ║', 'color: #E6F1FF;');
 console.log('%c║   💬 discord.gg/NUh6Mf22                            ║', 'color: #E6F1FF;');
 console.log('%c║                                                       ║', 'color: #0066FF;');
 console.log('%c╚═══════════════════════════════════════════════════════╝', 'color: #0066FF; font-weight: bold;');

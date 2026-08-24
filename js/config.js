@@ -53,7 +53,7 @@ const CONFIG = {
 
     // API endpoints
     api: {
-        github: 'https://api.github.com/users/Xiata279',
+        github: 'https://api.github.com/users/luanem2709',
         emailjs: {
             serviceId: 'YOUR_SERVICE_ID', // Sẽ cập nhật sau
             templateId: 'YOUR_TEMPLATE_ID',
@@ -67,7 +67,7 @@ const CONFIG = {
         title: 'Software Engineer & Content Creator',
         email: 'nguyenthanhluan.270924@gmail.com',
         phone: '0816042709',
-        github: 'Xiata279',
+        github: 'luanem2709',
         discord: 'Ma Đạo Community',
         tiktok: '@LuanEm2709'
     },

@@ -29,7 +29,7 @@ Xin chào, mình là Thành Luân - developer và quản lý cộng đồng. Web
 ## Chạy local
 
 ```bash
-git clone https://github.com/Xiata279/portfolio-thanhluan.git
+git clone https://github.com/luanem2709/portfolio-thanhluan.git
 cd portfolio-thanhluan
 ```
 
@@ -60,7 +60,7 @@ portfolio-thanhluan/
 
 ## Liên hệ
 
-- GitHub: [@Xiata279](https://github.com/Xiata279)
+- GitHub: [@luanem2709](https://github.com/luanem2709)
 - Discord: Ma Đạo Community
 - TikTok: @madaotz
 
