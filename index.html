@@ -46,12 +46,14 @@
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="enhanced-styles.css">
     <link rel="stylesheet" href="blog-styles.css">
+    <link rel="stylesheet" href="css/home-polish.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="canonical" href="https://luanem2709.github.io/portfolio-thanhluan/">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- JSON-LD Structured Data -->
@@ -89,12 +91,12 @@
             </div>
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="pages/about.html" class="nav-link">About Me</a></li>
-                    <li><a href="pages/projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="index.html" class="nav-link active">Trang Chủ</a></li>
+                    <li><a href="pages/about.html" class="nav-link">Về Tôi</a></li>
+                    <li><a href="pages/projects.html" class="nav-link">Dự Án</a></li>
                     <li><a href="pages/blog.html" class="nav-link">Blog</a></li>
-                    <li><a href="pages/achievements.html" class="nav-link">Achievements</a></li>
-                    <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="pages/achievements.html" class="nav-link">Thành Tựu</a></li>
+                    <li><a href="pages/contact.html" class="nav-link">Liên Hệ</a></li>
                 </ul>
             </div>
             <div class="hamburger" id="hamburger">
@@ -118,50 +120,175 @@
                         </h2>
                     </div>
                     <p class="hero-description">
-                        Sinh viên năm cuối Ngành Công nghệ Thông tin tại HUTECH, với kinh nghiệm làm việc trong lĩnh vực
-                        CSKH Game và quản lý cộng đồng.
-                        Đam mê phát triển phần mềm, automation và xây dựng cộng đồng. Hiện đang điều hành Ma Đạo
-                        Community
-                        với hơn 3000 thành viên và phát triển các giải pháp Discord Bot.
+                        Sinh viên năm cuối CNTT tại HUTECH. Xây dựng sản phẩm web/extension, Discord bot và vận hành
+                        cộng đồng Ma Đạo 3000+ thành viên. Tập trung vào automation, trải nghiệm người dùng và nội dung số.
                     </p>
                     <div class="hero-buttons">
-                        <a href="pages/contact.html" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Liên Hệ Với Tôi
-                        </a>
-                        <a href="pages/projects.html" class="btn btn-secondary">
+                        <a href="pages/projects.html" class="btn btn-primary">
                             <i class="fas fa-rocket"></i> Xem Dự Án
+                        </a>
+                        <a href="pages/contact.html" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i> Liên Hệ
+                        </a>
+                        <a href="assets/cv.pdf" class="btn btn-secondary" download="NguyenThanhLuan_CV.pdf">
+                            <i class="fas fa-file-arrow-down"></i> Tải CV
                         </a>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/luanem2709" target="_blank" title="GitHub">
+                        <a href="https://github.com/luanem2709" target="_blank" rel="noopener" title="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://discord.gg/c7xydmKY58" target="_blank" title="Discord - Ma Đạo Community">
+                        <a href="https://discord.gg/NUh6Mf22" target="_blank" rel="noopener" title="Discord - Ma Đạo Community">
                             <i class="fab fa-discord"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@LuanEm2709" target="_blank" title="TikTok - Ma Đạo">
+                        <a href="https://www.tiktok.com/@LuanEm2709" target="_blank" rel="noopener" title="TikTok">
                             <i class="fab fa-tiktok"></i>
                         </a>
-                        <a href="https://facebook.com/LuanEm2709" target="_blank" title="Facebook">
+                        <a href="https://facebook.com/LuanEm2709" target="_blank" rel="noopener" title="Facebook">
                             <i class="fab fa-facebook"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/xiata-sano-521143391/" target="_blank" title="LinkedIn">
+                        <a href="https://www.linkedin.com/in/xiata-sano-521143391/" target="_blank" rel="noopener" title="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <div class="image-wrapper">
-                        <img src="assets/profile.jpg" alt="Nguyễn Thành Luân">
+                        <img src="assets/profile.jpg" alt="Nguyễn Thành Luân - Software Engineer">
                         <div class="image-border"></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="scroll-down">
-            <a href="pages/about.html">
+            <a href="#highlights" aria-label="Cuộn xuống phần nổi bật">
                 <i class="fas fa-chevron-down"></i>
             </a>
+        </div>
+    </section>
+
+    <section id="highlights" class="home-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Tổng quan</span>
+                <h2 class="section-title">Số liệu nổi bật</h2>
+                <p class="section-subtitle">Những dấu mốc thể hiện năng lực xây dựng sản phẩm và cộng đồng</p>
+            </div>
+            <div class="home-stats">
+                <div class="home-stat">
+                    <i class="fas fa-users"></i>
+                    <strong>3000+</strong>
+                    <span>Thành viên Ma Đạo</span>
+                </div>
+                <div class="home-stat">
+                    <i class="fab fa-tiktok"></i>
+                    <strong>50K+</strong>
+                    <span>TikTok followers</span>
+                </div>
+                <div class="home-stat">
+                    <i class="fas fa-code"></i>
+                    <strong>10+</strong>
+                    <span>Dự án GitHub</span>
+                </div>
+                <div class="home-stat">
+                    <i class="fas fa-award"></i>
+                    <strong>Giải Nhất</strong>
+                    <span>Sáng tạo HUTECH</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured" class="home-section home-featured">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Featured</span>
+                <h2 class="section-title">Dự án tiêu biểu</h2>
+                <p class="section-subtitle">Một số sản phẩm thể hiện hướng đi kỹ thuật và vận hành thực tế</p>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/funnygame-logo.png" alt="FUNNYGAME YouTube Ad Block">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Extension</span>
+                            <span class="tag">Chrome MV3</span>
+                        </div>
+                        <h3>FUNNYGAME YouTube Ad Block</h3>
+                        <p>Extension Manifest V3 chặn quảng cáo YouTube với lọc InnerTube, DNR và giao diện tiếng Việt.</p>
+                        <a href="https://github.com/luanem2709/YOUTUBE-ADB-BLOCK" target="_blank" rel="noopener">Xem trên GitHub →</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project2.gif" alt="Ma Đạo Ticket Bot">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Discord.js</span>
+                        </div>
+                        <h3>Ma Đạo Ticket Bot</h3>
+                        <p>Bot ticket hỗ trợ cộng đồng Discord: tạo kênh, phân loại yêu cầu và lưu trữ ticket tự động.</p>
+                        <a href="https://github.com/luanem2709/MaDao-Ticket-NodeJS" target="_blank" rel="noopener">Xem trên GitHub →</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project1.gif" alt="Ma Đạo Community">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Community</span>
+                            <span class="tag">3000+</span>
+                        </div>
+                        <h3>Ma Đạo Community</h3>
+                        <p>Xây dựng và vận hành cộng đồng Discord giải trí, kết hợp store và hệ thống bot hỗ trợ.</p>
+                        <a href="https://discord.gg/NUh6Mf22" target="_blank" rel="noopener">Tham gia Discord →</a>
+                    </div>
+                </article>
+            </div>
+            <div class="section-actions">
+                <a href="pages/projects.html" class="btn btn-primary"><i class="fas fa-folder-open"></i> Tất cả dự án</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="stack" class="home-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Stack</span>
+                <h2 class="section-title">Công nghệ thường dùng</h2>
+                <p class="section-subtitle">Công cụ mình dùng để xây bot, extension và sản phẩm web</p>
+            </div>
+            <div class="home-skills-grid">
+                <div class="home-skill"><i class="fab fa-js"></i>JavaScript</div>
+                <div class="home-skill"><i class="fab fa-node-js"></i>Node.js</div>
+                <div class="home-skill"><i class="fab fa-html5"></i>HTML / CSS</div>
+                <div class="home-skill"><i class="fab fa-chrome"></i>Chrome Extension</div>
+                <div class="home-skill"><i class="fab fa-discord"></i>Discord.js</div>
+                <div class="home-skill"><i class="fab fa-git-alt"></i>Git / GitHub</div>
+                <div class="home-skill"><i class="fab fa-python"></i>Python</div>
+                <div class="home-skill"><i class="fas fa-database"></i>SQL / JSON</div>
+            </div>
+            <div class="section-actions">
+                <a href="pages/about.html" class="btn btn-secondary"><i class="fas fa-user"></i> Xem hồ sơ đầy đủ</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-section">
+        <div class="container">
+            <div class="home-cta">
+                <h2>Cùng làm sản phẩm hữu ích</h2>
+                <p>Mở cho cơ hội hợp tác Discord bot, extension, automation hoặc nội dung cộng đồng. Cứ gửi một tin nhắn ngắn.</p>
+                <div class="home-cta-actions">
+                    <a href="pages/contact.html" class="btn btn-primary"><i class="fas fa-envelope"></i> Liên hệ ngay</a>
+                    <a href="https://github.com/luanem2709" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -170,13 +297,12 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>Nguyễn Thành Luân</h3>
-                    <p>Sinh viên CNTT tại HUTECH, founder Ma Đạo Community với 3000+ thành viên và vận hành 3 kênh
-                        TikTok với 50K+ followers.</p>
+                    <p>Software Engineer · Community Builder · Content Creator. Founder Ma Đạo Community.</p>
                     <div class="footer-social">
-                        <a href="https://facebook.com/LuanEm2709" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://github.com/luanem2709" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://discord.gg/NUh6Mf22" target="_blank"><i class="fab fa-discord"></i></a>
-                        <a href="https://www.tiktok.com/@madaotz" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://github.com/luanem2709" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.gg/NUh6Mf22" target="_blank" rel="noopener"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.tiktok.com/@LuanEm2709" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://facebook.com/LuanEm2709" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
                         <a href="mailto:nguyenthanhluan.270924@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
@@ -185,8 +311,10 @@
                     <ul>
                         <li><a href="index.html">Trang Chủ</a></li>
                         <li><a href="pages/about.html">Về Tôi</a></li>
-                        <li><a href="pages/skills.html">Kỹ Năng</a></li>
                         <li><a href="pages/projects.html">Dự Án</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                        <li><a href="pages/achievements.html">Thành Tựu</a></li>
+                        <li><a href="pages/contact.html">Liên Hệ</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -195,12 +323,13 @@
                         <li><i class="fas fa-envelope"></i> nguyenthanhluan.270924@gmail.com</li>
                         <li><i class="fas fa-phone"></i> 0816042709</li>
                         <li><i class="fas fa-map-marker-alt"></i> Quận 9, TP.HCM</li>
+                        <li><i class="fas fa-graduation-cap"></i> HUTECH University</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Nguyễn Thành Luân. Tất cả các quyền được bảo lưu.</p>
-                <p>Thiết kế và phát triển bởi Nguyễn Thành Luân</p>
+                <p>&copy; 2026 Nguyễn Thành Luân. Tất cả các quyền được bảo lưu.</p>
+                <p>Portfolio: <a href="https://luanem2709.github.io/portfolio-thanhluan/">luanem2709.github.io</a></p>
             </div>
         </div>
     </footer>
@@ -209,21 +338,11 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Core JavaScript Files -->
     <script src="js/config.js"></script>
-    <script src="js/performance-monitor.js"></script>
     <script src="js/lazy-loading.js"></script>
-    <script src="js/terminal-intro.js"></script>
-    <script src="js/particle-cursor.js"></script>
     <script src="js/theme-manager.js"></script>
-    <script src="js/easter-eggs.js"></script>
-    <script src="js/contact-form.js"></script>
-    <script src="js/github-stats.js"></script>
     <script src="js/visual-effects.js"></script>
-    <script src="js/music-player.js"></script>
-    <script src="js/immersive-mode.js"></script>
     <script src="script.js"></script>
-    <script src="advanced-effects.js"></script>
 </body>
 
 </html>

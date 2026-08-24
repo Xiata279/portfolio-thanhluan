@@ -38,26 +38,26 @@ const CONFIG = {
 
     // Feature flags
     features: {
-        terminalIntro: true,
-        particleCursor: true,
-        easterEggs: true,
-        voiceCommands: false, // Experimental
+        terminalIntro: false,
+        particleCursor: false,
+        easterEggs: false,
+        voiceCommands: false,
         matrixRain: false,
-        githubStats: false,          // Disabled to avoid fake fallback data
-        visitorCounter: true,
-        musicPlayer: true,           // NEW: Ambient music player
-        glassmorphism: true,         // NEW: Glass-morph effects
-        visualEffects: true,         // NEW: Click ripples, parallax
-        immersiveMode: true          // NEW: Immersive mode toggle
+        githubStats: true,
+        visitorCounter: false,
+        musicPlayer: false,
+        glassmorphism: true,
+        visualEffects: true,
+        immersiveMode: false
     },
 
     // API endpoints
     api: {
         github: 'https://api.github.com/users/luanem2709',
         emailjs: {
-            serviceId: 'YOUR_SERVICE_ID', // Sẽ cập nhật sau
-            templateId: 'YOUR_TEMPLATE_ID',
-            publicKey: 'YOUR_PUBLIC_KEY'
+            serviceId: 'service_tbgvmpj',
+            templateId: 'template_heik4ow',
+            publicKey: 'oCLX80jQ7U-0e5Mgc'
         }
     },
 

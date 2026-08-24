@@ -10,9 +10,11 @@ class ContactForm {
 
     init() {
         if (!this.form) return;
-
-        // Initialize EmailJS with correct public key
-        emailjs.init('oCLX80jQ7U-0e5Mgc');
+        if (typeof emailjs === 'undefined') {
+            console.warn('EmailJS chưa tải. Form sẽ mở mailto fallback.');
+        } else {
+            emailjs.init((typeof CONFIG !== 'undefined' && CONFIG.api?.emailjs?.publicKey) || 'oCLX80jQ7U-0e5Mgc');
+        }
 
         this.submitBtn = this.form.querySelector('button[type="submit"]');
         this.form.addEventListener('submit', (e) => this.handleSubmit(e));
@@ -21,31 +23,33 @@ class ContactForm {
     async handleSubmit(e) {
         e.preventDefault();
 
-        // Validation
         if (!this.validateForm()) {
             return;
         }
 
-        // Show loading
         this.setLoading(true);
 
-        try {
-            // Send email via EmailJS
-            await emailjs.sendForm(
-                'service_tbgvmpj',
-                'template_heik4ow',  // User's template ID
-                this.form
-            );
+        const serviceId = (typeof CONFIG !== 'undefined' && CONFIG.api?.emailjs?.serviceId) || 'service_tbgvmpj';
+        const templateId = (typeof CONFIG !== 'undefined' && CONFIG.api?.emailjs?.templateId) || 'template_heik4ow';
 
-            // Success
+        try {
+            if (typeof emailjs === 'undefined') {
+                const name = this.form.querySelector('#name').value.trim();
+                const email = this.form.querySelector('#email').value.trim();
+                const subject = this.form.querySelector('#subject').value.trim();
+                const message = this.form.querySelector('#message').value.trim();
+                const body = encodeURIComponent(`Từ: ${name} <${email}>\n\n${message}`);
+                window.location.href = `mailto:nguyenthanhluan.270924@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+                this.showNotification('Đã mở ứng dụng email của bạn.', 'info');
+                return;
+            }
+
+            await emailjs.sendForm(serviceId, templateId, this.form);
             this.showNotification('Gửi thành công! Tôi sẽ phản hồi sớm nhất.', 'success');
             this.form.reset();
-
         } catch (error) {
-            // Error
             console.error('Email error:', error);
             this.showNotification('Gửi thất bại. Vui lòng thử lại hoặc email trực tiếp.', 'error');
-
         } finally {
             this.setLoading(false);
         }

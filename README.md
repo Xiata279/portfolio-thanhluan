@@ -1,74 +1,29 @@
-# Portfolio Website
+# Portfolio — Nguyễn Thành Luân
 
-Website cá nhân giới thiệu các dự án và kinh nghiệm của tôi.
+Site cá nhân: https://luanem2709.github.io/portfolio-thanhluan/
 
-## Giới thiệu
+## Nội dung
 
-Xin chào, mình là Thành Luân - developer và quản lý cộng đồng. Website này showcase:
-- Phát triển web (Node.js, JavaScript)
-- Discord bot development
-- Tạo nội dung (TikTok, 50K+ followers)
-- Quản lý cộng đồng Ma Đạo (3000+ members)
-
-## Tech Stack
-
-- HTML5, CSS3, JavaScript
-- Hiệu ứng nền cosmic theme với animations
-- Responsive design
-- Music player tự động phát nhạc
-
-## Tính năng
-
-- Nền vũ trụ animated (nebula, aurora, shooting stars)
-- Danh sách dự án có bộ lọc theo category
-- Blog với thanh progress đọc
-- Music player tự động
-- Dark mode
-- Tương thích mobile
+- Trang chủ: hero, số liệu, dự án tiêu biểu, stack, CTA
+- Về tôi / Dự án / Blog / Thành tựu / Liên hệ
+- Brand: **LUÂNEM** · GitHub [@luanem2709](https://github.com/luanem2709)
 
 ## Chạy local
 
 ```bash
 git clone https://github.com/luanem2709/portfolio-thanhluan.git
 cd portfolio-thanhluan
-```
-
-Mở file `index.html` trực tiếp trong browser, hoặc dùng server:
-
-```bash
-# Python
 python -m http.server 8000
-
-# Node.js
-npx http-server
 ```
 
-Truy cập `http://localhost:8000`
-
-## Cấu trúc
-
-```
-portfolio-thanhluan/
-├── index.html
-├── pages/              # Các trang
-├── js/                 # JavaScript modules
-├── css/                # Stylesheets
-├── assets/             # Hình ảnh, media
-└── components/         # Reusable components
-```
-
+Mở http://localhost:8000
 
 ## Liên hệ
 
-- GitHub: [@luanem2709](https://github.com/luanem2709)
-- Discord: Ma Đạo Community
-- TikTok: @madaotz
+- Email: nguyenthanhluan.270924@gmail.com
+- Discord: https://discord.gg/NUh6Mf22
+- TikTok: [@LuanEm2709](https://www.tiktok.com/@LuanEm2709)
 
 ## License
 
-MIT License
-
----
-
-Coded with vanilla JavaScript - không dùng framework.
-
+MIT

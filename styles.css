@@ -19,7 +19,7 @@ html {
 
 /* Premium Animated Mesh Gradient Background */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'IBM Plex Sans', 'Sora', system-ui, sans-serif;
     background: linear-gradient(135deg, #0A192F 0%, #0d1f3d 25%, #112240 50%, #0d1f3d 75%, #0A192F 100%);
     color: var(--l);
     line-height: 1.6;

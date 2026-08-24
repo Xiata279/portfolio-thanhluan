@@ -17,7 +17,9 @@ class ComponentLoader {
 
     async loadNavbar() {
         try {
-            const response = await fetch('../components/navbar.html');
+            const path = this.componentPath('navbar.html');
+            const response = await fetch(path);
+            if (!response.ok) throw new Error(response.statusText);
             const html = await response.text();
             document.body.insertAdjacentHTML('afterbegin', html);
         } catch (error) {
@@ -27,12 +29,19 @@ class ComponentLoader {
 
     async loadFooter() {
         try {
-            const response = await fetch('../components/footer.html');
+            const path = this.componentPath('footer.html');
+            const response = await fetch(path);
+            if (!response.ok) throw new Error(response.statusText);
             const html = await response.text();
             document.body.insertAdjacentHTML('beforeend', html);
         } catch (error) {
             console.error('Error loading footer:', error);
         }
+    }
+
+    componentPath(file) {
+        const inPages = window.location.pathname.includes('/pages/');
+        return inPages ? `../components/${file}` : `components/${file}`;
     }
 
     setActiveNavLink() {

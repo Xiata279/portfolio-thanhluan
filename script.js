@@ -1,11 +1,13 @@
 ﻿const typingText = document.querySelector('.typing-text');
-const phrases = ['Kỹ Sư Phần Mềm', 'Content Creator', 'Bot Developer', 'Community Builder', 'Customer Service Specialist'];
+const phrases = ['Software Engineer', 'Discord Bot Developer', 'Community Builder', 'Content Creator', 'Automation Enthusiast'];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 let typingSpeed = 150;
 
 function type() {
+    if (!typingText) return;
+
     const currentPhrase = phrases[phraseIndex];
 
     if (isDeleting) {
