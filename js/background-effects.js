@@ -2,18 +2,23 @@
 
 class BackgroundEffects {
     constructor() {
+        this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         this.init();
     }
 
     init() {
         this.createStars();
         this.createGradientOrbs();
+        this.createVignette();
+
+        // Bỏ các lớp nặng/động khi người dùng muốn giảm chuyển động
+        if (this.reducedMotion) return;
+
         this.createNebulaClouds();
         this.createAuroraWaves();
         this.createLightBeams();
         this.createCosmicDust();
         this.createGridLines();
-        this.createVignette();
         this.createNoiseOverlay();
         this.createFloatingParticles();
         this.initSpotlight();
@@ -24,11 +29,11 @@ class BackgroundEffects {
         const container = document.createElement('div');
         container.className = 'stars-background';
 
-        // 150 stars with cosmic colors
         const starSizes = ['small', 'medium', 'large'];
         const starColors = ['', 'cosmic-cyan', 'cosmic-purple', 'cosmic-pink'];
+        const count = this.reducedMotion ? 30 : 60;
 
-        for (let i = 0; i < 150; i++) {
+        for (let i = 0; i < count; i++) {
             const star = document.createElement('div');
             const size = starSizes[Math.floor(Math.random() * starSizes.length)];
             const color = starColors[Math.floor(Math.random() * starColors.length)];
@@ -142,7 +147,7 @@ class BackgroundEffects {
         const container = document.createElement('div');
         container.className = 'floating-particles';
 
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 14; i++) {
             const particle = document.createElement('div');
             particle.className = 'particle';
             particle.style.left = Math.random() * 100 + '%';
@@ -159,13 +164,20 @@ class BackgroundEffects {
         spotlight.className = 'spotlight';
         document.body.appendChild(spotlight);
 
-        // Track mouse position for spotlight
+        // Throttle bằng requestAnimationFrame để tránh cập nhật quá nhiều lần/frame
+        let pending = false;
+        let lastX = 50, lastY = 50;
         document.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth) * 100;
-            const y = (e.clientY / window.innerHeight) * 100;
-            spotlight.style.setProperty('--mouse-x', x + '%');
-            spotlight.style.setProperty('--mouse-y', y + '%');
-        });
+            lastX = (e.clientX / window.innerWidth) * 100;
+            lastY = (e.clientY / window.innerHeight) * 100;
+            if (pending) return;
+            pending = true;
+            requestAnimationFrame(() => {
+                spotlight.style.setProperty('--mouse-x', lastX + '%');
+                spotlight.style.setProperty('--mouse-y', lastY + '%');
+                pending = false;
+            });
+        }, { passive: true });
     }
 }
 

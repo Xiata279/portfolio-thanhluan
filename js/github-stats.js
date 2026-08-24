@@ -8,6 +8,8 @@ class GitHubStats {
         this.username = CONFIG.info.github;
         this.apiUrl = CONFIG.api.github;
         this.stats = null;
+        this.refreshInterval = null;
+        this.animationTimers = {};
         this.init();
     }
 
@@ -16,9 +18,10 @@ class GitHubStats {
         this.createWidget();
         this.updateWidget();
 
-        // Update every 5 minutes
-        setInterval(() => {
-            this.fetchStats();
+        // Cập nhật mỗi 5 phút; xoá interval cũ nếu có để tránh rò rỉ
+        if (this.refreshInterval) clearInterval(this.refreshInterval);
+        this.refreshInterval = setInterval(async () => {
+            await this.fetchStats();
             this.updateWidget();
         }, 300000);
     }
@@ -27,11 +30,23 @@ class GitHubStats {
         try {
             // Fetch user data
             const userResponse = await fetch(this.apiUrl);
+            if (userResponse.status === 403) {
+                throw new Error('GitHub API rate limit exceeded (60 req/h chưa xác thực)');
+            }
+            if (!userResponse.ok) {
+                throw new Error(`GitHub user API lỗi: ${userResponse.status}`);
+            }
             const userData = await userResponse.json();
 
             // Fetch repos
             const reposResponse = await fetch(`${this.apiUrl}/repos?sort=updated&per_page=100`);
+            if (!reposResponse.ok) {
+                throw new Error(`GitHub repos API lỗi: ${reposResponse.status}`);
+            }
             const reposData = await reposResponse.json();
+            if (!Array.isArray(reposData)) {
+                throw new Error('GitHub repos API trả về dữ liệu không hợp lệ');
+            }
 
             // Calculate stats
             const totalStars = reposData.reduce((sum, repo) => sum + repo.stargazers_count, 0);
@@ -158,15 +173,21 @@ class GitHubStats {
         const element = document.getElementById(id);
         if (!element) return;
 
+        // Xoá timer cũ của chính phần tử này trước khi chạy timer mới
+        if (this.animationTimers[id]) {
+            clearInterval(this.animationTimers[id]);
+        }
+
         const range = end - start;
         const increment = range / (duration / 16);
         let current = start;
 
-        const timer = setInterval(() => {
+        this.animationTimers[id] = setInterval(() => {
             current += increment;
             if (current >= end) {
                 element.textContent = end;
-                clearInterval(timer);
+                clearInterval(this.animationTimers[id]);
+                this.animationTimers[id] = null;
             } else {
                 element.textContent = Math.floor(current);
             }

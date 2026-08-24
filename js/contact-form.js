@@ -39,7 +39,8 @@ class ContactForm {
                 const subject = this.form.querySelector('#subject').value.trim();
                 const message = this.form.querySelector('#message').value.trim();
                 const body = encodeURIComponent(`Từ: ${name} <${email}>\n\n${message}`);
-                window.location.href = `mailto:nguyenthanhluan.270924@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+                const toEmail = (typeof CONFIG !== 'undefined' && CONFIG.info?.email) || 'nguyenthanhluan.270924@gmail.com';
+                window.location.href = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${body}`;
                 this.showNotification('Đã mở ứng dụng email của bạn.', 'info');
                 return;
             }

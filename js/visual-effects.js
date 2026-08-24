@@ -55,35 +55,6 @@ class VisualEffects {
         });
     }
 
-    // Parallax scroll effect for hero section
-    addParallaxEffect() {
-        const heroSection = document.querySelector('.hero');
-        if (!heroSection) return;
-
-        let ticking = false;
-
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    this.updateParallax(heroSection);
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-    }
-
-    updateParallax(element) {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * 0.5;
-
-        // Only apply parallax when hero is visible
-        if (scrolled < window.innerHeight) {
-            element.style.transform = `translateY(${rate}px)`;
-            element.style.opacity = 1 - (scrolled / window.innerHeight) * 0.5;
-        }
-    }
-
     // Hover glow effect for interactive elements
     addHoverGlow() {
         const glowElements = document.querySelectorAll('.project-card, .blog-card, .achievement-card, .btn');
@@ -308,32 +279,19 @@ const scrollProgress = document.createElement('div');
 scrollProgress.className = 'scroll-progress';
 document.body.appendChild(scrollProgress);
 
+let progressPending = false;
 window.addEventListener('scroll', () => {
-    const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrolled = (window.pageYOffset / windowHeight) * 100;
-    scrollProgress.style.width = scrolled + '%';
-});
-
-// Fade in on scroll observer
-const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+    if (progressPending) return;
+    progressPending = true;
+    requestAnimationFrame(() => {
+        const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = windowHeight > 0 ? (window.pageYOffset / windowHeight) * 100 : 0;
+        scrollProgress.style.width = scrolled + '%';
+        progressPending = false;
     });
-}, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-});
+}, { passive: true });
 
-// Observe elements for fade-in
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.project-card, .blog-card, .achievement-card, .skill-item')
-        .forEach(el => {
-            el.classList.add('fade-in-scroll');
-            fadeObserver.observe(el);
-        });
-});
+// Lưu ý: reveal khi cuộn do script.js xử lý (nguồn duy nhất) để tránh trùng observer.
 
 // Initialize visual effects
 if (document.readyState === 'loading') {

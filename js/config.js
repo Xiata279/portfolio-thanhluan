@@ -36,19 +36,12 @@ const CONFIG = {
         }
     },
 
-    // Feature flags
+    // Feature flags (chỉ giữ những flag thực sự được script đọc)
     features: {
-        terminalIntro: false,
         particleCursor: true,
         easterEggs: true,
-        voiceCommands: false,
-        matrixRain: false,
         githubStats: true,
-        visitorCounter: false,
-        musicPlayer: false,
-        glassmorphism: true,
-        visualEffects: true,
-        immersiveMode: true
+        musicPlayer: false
     },
 
     // API endpoints
