@@ -1,5 +1,11 @@
 ﻿const typingText = document.querySelector('.typing-text');
-const phrases = ['Software Engineer', 'Discord Bot Developer', 'Community Builder', 'Content Creator', 'Automation Enthusiast'];
+const phrases = [
+    'Lập Trình Viên',
+    'Discord Bot Developer',
+    'Chrome Extension Dev',
+    'Community Builder',
+    'Content Creator'
+];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

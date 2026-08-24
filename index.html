@@ -107,30 +107,46 @@
         </div>
     </nav>
 
-    <section id="home" class="hero">
+    <section id="home" class="hero home-hero">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <p class="greeting">Xin chào! Tôi là</p>
+                    <div class="hero-status">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        Sẵn sàng hợp tác · Freelance & dự án
+                    </div>
+                    <p class="greeting">Xin chào, mình là</p>
                     <h1 class="hero-title">Nguyễn Thành Luân</h1>
                     <div class="typing-container">
                         <h2 class="hero-subtitle">
+                            <span class="typing-prefix">Tôi là </span>
                             <span class="typing-text"></span>
-                            <span class="cursor">|</span>
+                            <span class="cursor" aria-hidden="true">|</span>
                         </h2>
                     </div>
+                    <ul class="hero-meta">
+                        <li><i class="fas fa-graduation-cap"></i> HUTECH · Công nghệ thông tin</li>
+                        <li><i class="fas fa-location-dot"></i> Quận 9, TP. Hồ Chí Minh</li>
+                        <li><i class="fab fa-discord"></i> Founder Ma Đạo Community</li>
+                    </ul>
                     <p class="hero-description">
-                        Sinh viên năm cuối CNTT tại HUTECH. Xây dựng sản phẩm web/extension, Discord bot và vận hành
-                        cộng đồng Ma Đạo 3000+ thành viên. Tập trung vào automation, trải nghiệm người dùng và nội dung số.
+                        Sinh viên năm cuối CNTT, xây dựng extension Chrome, Discord bot và vận hành cộng đồng
+                        3000+ thành viên. Ưu tiên sản phẩm thực tế, automation và trải nghiệm người dùng gọn gàng.
                     </p>
+                    <div class="hero-tags">
+                        <span class="hero-tag">Discord Bot</span>
+                        <span class="hero-tag">Chrome Extension</span>
+                        <span class="hero-tag">Web App</span>
+                        <span class="hero-tag">Community Ops</span>
+                    </div>
                     <div class="hero-buttons">
                         <a href="pages/projects.html" class="btn btn-primary">
-                            <i class="fas fa-rocket"></i> Xem Dự Án
+                            <i class="fas fa-rocket"></i> Xem dự án
                         </a>
                         <a href="pages/contact.html" class="btn btn-secondary">
-                            <i class="fas fa-paper-plane"></i> Liên Hệ
+                            <i class="fas fa-paper-plane"></i> Liên hệ
                         </a>
-                        <a href="assets/cv.pdf" class="btn btn-secondary" download="NguyenThanhLuan_CV.pdf">
+                        <a href="assets/cv.pdf" class="btn-ghost" download="NguyenThanhLuan_CV.pdf">
                             <i class="fas fa-file-arrow-down"></i> Tải CV
                         </a>
                     </div>
@@ -155,15 +171,52 @@
                 <div class="hero-image">
                     <div class="image-wrapper">
                         <img src="assets/profile.jpg" alt="Nguyễn Thành Luân - Software Engineer">
-                        <div class="image-border"></div>
+                        <div class="hero-float-card hero-float-card--top">
+                            <i class="fas fa-users"></i> 3000+ thành viên
+                        </div>
+                        <div class="hero-float-card hero-float-card--bottom">
+                            <i class="fab fa-github"></i> 10+ repo mã nguồn
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="scroll-down">
-            <a href="#highlights" aria-label="Cuộn xuống phần nổi bật">
+            <a href="#services" aria-label="Cuộn xuống phần lĩnh vực">
                 <i class="fas fa-chevron-down"></i>
             </a>
+        </div>
+    </section>
+
+    <section id="services" class="home-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Lĩnh vực</span>
+                <h2 class="section-title">Mình làm gì</h2>
+                <p class="section-subtitle">Tập trung vào sản phẩm có thể triển khai, vận hành và mở rộng thực tế</p>
+            </div>
+            <div class="home-services-grid">
+                <article class="home-service">
+                    <div class="home-service-icon"><i class="fab fa-discord"></i></div>
+                    <h3>Discord Bot</h3>
+                    <p>Ticket, moderation, automation và tích hợp store cho cộng đồng Discord quy mô lớn.</p>
+                </article>
+                <article class="home-service">
+                    <div class="home-service-icon"><i class="fab fa-chrome"></i></div>
+                    <h3>Chrome Extension</h3>
+                    <p>Extension Manifest V3, lọc quảng cáo, tối ưu UX và triển khai cho người dùng thật.</p>
+                </article>
+                <article class="home-service">
+                    <div class="home-service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Web & Backend</h3>
+                    <p>Ứng dụng web, API Node.js, quản lý dữ liệu và tích hợp dịch vụ bên thứ ba.</p>
+                </article>
+                <article class="home-service">
+                    <div class="home-service-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Community & Content</h3>
+                    <p>Vận hành Ma Đạo, xây nội dung TikTok và kết nối cộng đồng 50K+ followers.</p>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -172,28 +225,28 @@
             <div class="section-header">
                 <span class="section-badge">Tổng quan</span>
                 <h2 class="section-title">Số liệu nổi bật</h2>
-                <p class="section-subtitle">Những dấu mốc thể hiện năng lực xây dựng sản phẩm và cộng đồng</p>
+                <p class="section-subtitle">Những con số phản ánh kinh nghiệm xây sản phẩm và cộng đồng</p>
             </div>
             <div class="home-stats">
                 <div class="home-stat">
                     <i class="fas fa-users"></i>
-                    <strong>3000+</strong>
+                    <strong data-count="3000+">0</strong>
                     <span>Thành viên Ma Đạo</span>
                 </div>
                 <div class="home-stat">
                     <i class="fab fa-tiktok"></i>
-                    <strong>50K+</strong>
-                    <span>TikTok followers</span>
+                    <strong data-count="50000+">0</strong>
+                    <span>Người theo dõi TikTok</span>
                 </div>
                 <div class="home-stat">
                     <i class="fas fa-code"></i>
-                    <strong>10+</strong>
-                    <span>Dự án GitHub</span>
+                    <strong data-count="10+">0</strong>
+                    <span>Dự án trên GitHub</span>
                 </div>
                 <div class="home-stat">
                     <i class="fas fa-award"></i>
                     <strong>Giải Nhất</strong>
-                    <span>Sáng tạo HUTECH</span>
+                    <span>Cuộc thi sáng tạo HUTECH</span>
                 </div>
             </div>
         </div>
@@ -202,14 +255,14 @@
     <section id="featured" class="home-section home-featured">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Featured</span>
+                <span class="section-badge">Nổi bật</span>
                 <h2 class="section-title">Dự án tiêu biểu</h2>
-                <p class="section-subtitle">Một số sản phẩm thể hiện hướng đi kỹ thuật và vận hành thực tế</p>
+                <p class="section-subtitle">Sản phẩm đã triển khai thực tế — từ extension đến bot và cộng đồng</p>
             </div>
             <div class="projects-grid">
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/funnygame-logo.png" alt="FUNNYGAME YouTube Ad Block">
+                        <img src="assets/funnygame-logo.png" alt="FUNNYGAME YouTube Ad Block" loading="lazy">
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
@@ -218,12 +271,14 @@
                         </div>
                         <h3>FUNNYGAME YouTube Ad Block</h3>
                         <p>Extension Manifest V3 chặn quảng cáo YouTube với lọc InnerTube, DNR và giao diện tiếng Việt.</p>
-                        <a href="https://github.com/luanem2709/YOUTUBE-ADB-BLOCK" target="_blank" rel="noopener">Xem trên GitHub →</a>
+                        <a href="https://github.com/luanem2709/YOUTUBE-ADB-BLOCK" target="_blank" rel="noopener" class="project-link">
+                            Xem trên GitHub <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </article>
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/project2.gif" alt="Ma Đạo Ticket Bot">
+                        <img src="assets/project2.gif" alt="Ma Đạo Ticket Bot" loading="lazy">
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
@@ -232,12 +287,14 @@
                         </div>
                         <h3>Ma Đạo Ticket Bot</h3>
                         <p>Bot ticket hỗ trợ cộng đồng Discord: tạo kênh, phân loại yêu cầu và lưu trữ ticket tự động.</p>
-                        <a href="https://github.com/luanem2709/MaDao-Ticket-NodeJS" target="_blank" rel="noopener">Xem trên GitHub →</a>
+                        <a href="https://github.com/luanem2709/MaDao-Ticket-NodeJS" target="_blank" rel="noopener" class="project-link">
+                            Xem trên GitHub <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </article>
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/project1.gif" alt="Ma Đạo Community">
+                        <img src="assets/project1.gif" alt="Ma Đạo Community" loading="lazy">
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
@@ -246,7 +303,9 @@
                         </div>
                         <h3>Ma Đạo Community</h3>
                         <p>Xây dựng và vận hành cộng đồng Discord giải trí, kết hợp store và hệ thống bot hỗ trợ.</p>
-                        <a href="https://discord.gg/NUh6Mf22" target="_blank" rel="noopener">Tham gia Discord →</a>
+                        <a href="https://discord.gg/NUh6Mf22" target="_blank" rel="noopener" class="project-link">
+                            Tham gia Discord <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </article>
             </div>
@@ -256,22 +315,88 @@
         </div>
     </section>
 
+    <section id="about-preview" class="home-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Giới thiệu</span>
+                <h2 class="section-title">Vài dòng về mình</h2>
+                <p class="section-subtitle">Hành trình kết hợp lập trình, vận hành cộng đồng và làm nội dung</p>
+            </div>
+            <div class="home-about">
+                <div class="home-about-image">
+                    <img src="assets/madao-logo.png" alt="Ma Đạo Community" loading="lazy">
+                </div>
+                <div class="home-about-text">
+                    <h3>Từ ý tưởng đến sản phẩm thật</h3>
+                    <p>
+                        Mình bắt đầu với Discord bot và CSKH game, rồi mở rộng sang xây cộng đồng Ma Đạo,
+                        phát triển extension Chrome và chia sẻ kinh nghiệm qua TikTok. Mục tiêu luôn là tạo
+                        giá trị thực — không chỉ demo trên GitHub.
+                    </p>
+                    <ul class="home-timeline">
+                        <li>
+                            <i class="fab fa-discord"></i>
+                            <div>
+                                <strong>Ma Đạo Community</strong>
+                                <span>Founder & Developer · 2023 – nay</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-gamepad"></i>
+                            <div>
+                                <strong>MOLA INTERACTIVE</strong>
+                                <span>CSKH & Tư vấn Game · 2023 – 2024</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fab fa-tiktok"></i>
+                            <div>
+                                <strong>Content Creator</strong>
+                                <span>50K+ followers · Giải trí & cộng đồng</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="pages/about.html" class="btn btn-secondary"><i class="fas fa-user"></i> Đọc thêm về mình</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="stack" class="home-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Stack</span>
-                <h2 class="section-title">Công nghệ thường dùng</h2>
-                <p class="section-subtitle">Công cụ mình dùng để xây bot, extension và sản phẩm web</p>
+                <span class="section-badge">Công nghệ</span>
+                <h2 class="section-title">Stack thường dùng</h2>
+                <p class="section-subtitle">Nhóm công cụ mình dùng hàng ngày để ship sản phẩm</p>
             </div>
-            <div class="home-skills-grid">
-                <div class="home-skill"><i class="fab fa-js"></i>JavaScript</div>
-                <div class="home-skill"><i class="fab fa-node-js"></i>Node.js</div>
-                <div class="home-skill"><i class="fab fa-html5"></i>HTML / CSS</div>
-                <div class="home-skill"><i class="fab fa-chrome"></i>Chrome Extension</div>
-                <div class="home-skill"><i class="fab fa-discord"></i>Discord.js</div>
-                <div class="home-skill"><i class="fab fa-git-alt"></i>Git / GitHub</div>
-                <div class="home-skill"><i class="fab fa-python"></i>Python</div>
-                <div class="home-skill"><i class="fas fa-database"></i>SQL / JSON</div>
+            <div class="home-skills-wrap">
+                <div class="home-skill-group">
+                    <h4><i class="fas fa-code"></i> Frontend & Extension</h4>
+                    <div class="home-skill-tags">
+                        <span>JavaScript</span>
+                        <span>HTML / CSS</span>
+                        <span>Chrome MV3</span>
+                        <span>Responsive UI</span>
+                    </div>
+                </div>
+                <div class="home-skill-group">
+                    <h4><i class="fas fa-server"></i> Backend & Bot</h4>
+                    <div class="home-skill-tags">
+                        <span>Node.js</span>
+                        <span>Discord.js</span>
+                        <span>REST API</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+                <div class="home-skill-group">
+                    <h4><i class="fas fa-toolbox"></i> Công cụ & DevOps</h4>
+                    <div class="home-skill-tags">
+                        <span>Git / GitHub</span>
+                        <span>SQL / JSON</span>
+                        <span>GitHub Pages</span>
+                        <span>Automation</span>
+                    </div>
+                </div>
             </div>
             <div class="section-actions">
                 <a href="pages/about.html" class="btn btn-secondary"><i class="fas fa-user"></i> Xem hồ sơ đầy đủ</a>
@@ -283,7 +408,7 @@
         <div class="container">
             <div class="home-cta">
                 <h2>Cùng làm sản phẩm hữu ích</h2>
-                <p>Mở cho cơ hội hợp tác Discord bot, extension, automation hoặc nội dung cộng đồng. Cứ gửi một tin nhắn ngắn.</p>
+                <p>Đang mở hợp tác Discord bot, Chrome extension, automation hoặc vận hành cộng đồng. Gửi mình vài dòng — phản hồi nhanh qua email hoặc Discord.</p>
                 <div class="home-cta-actions">
                     <a href="pages/contact.html" class="btn btn-primary"><i class="fas fa-envelope"></i> Liên hệ ngay</a>
                     <a href="https://github.com/luanem2709" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
@@ -342,6 +467,7 @@
     <script src="js/lazy-loading.js"></script>
     <script src="js/theme-manager.js"></script>
     <script src="js/visual-effects.js"></script>
+    <script src="js/home.js"></script>
     <script src="script.js"></script>
 </body>
 
