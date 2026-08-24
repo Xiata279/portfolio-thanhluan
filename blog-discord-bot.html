@@ -5,29 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xây dựng Discord Bot từ A-Z với Node.js - Nguyễn Thành Luân</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Hướng dẫn xây dựng Discord Bot từ A-Z với Node.js và discord.js: setup, code bot đầu tiên, ticket system, database và deploy - đúc kết từ Ma Đạo Bot 3000+ thành viên.">
+    <meta name="author" content="Nguyễn Thành Luân">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://luanem2709.github.io/portfolio-thanhluan/blog-discord-bot.html">
+    <meta property="og:title" content="Xây dựng Discord Bot từ A-Z với Node.js">
+    <meta property="og:description"
+        content="Kinh nghiệm thực tế xây dựng Discord Bot với Node.js: setup, ticket system, database và deploy 24/7.">
+    <meta property="og:image" content="https://luanem2709.github.io/portfolio-thanhluan/assets/profile.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Xây dựng Discord Bot từ A-Z với Node.js">
+    <meta property="twitter:description"
+        content="Kinh nghiệm thực tế xây dựng Discord Bot với Node.js: setup, ticket system, database và deploy 24/7.">
+    <meta property="twitter:image" content="https://luanem2709.github.io/portfolio-thanhluan/assets/profile.jpg">
+
+    <link rel="canonical" href="https://luanem2709.github.io/portfolio-thanhluan/blog-discord-bot.html">
+    <link rel="icon" type="image/png" href="assets/madao-logo.png">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="blog-styles.css">
     <link rel="stylesheet" href="blog-post.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Xây dựng Discord Bot từ A-Z với Node.js",
+      "author": { "@type": "Person", "name": "Nguyễn Thành Luân" },
+      "url": "https://luanem2709.github.io/portfolio-thanhluan/blog-discord-bot.html",
+      "image": "https://luanem2709.github.io/portfolio-thanhluan/assets/profile.jpg",
+      "datePublished": "2024-12-15",
+      "publisher": { "@type": "Organization", "name": "Ma Đạo Community" }
+    }
+    </script>
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">LUÂNEM</a>
-            </div>
-            <div class="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="index.html#home" class="nav-link">Trang Chủ</a></li>
-                    <li><a href="index.html#blog" class="nav-link active">Blog</a></li>
-                    <li><a href="index.html#contact" class="nav-link">Liên Hệ</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Navbar được nạp bởi component-loader.js -->
 
     <article class="blog-post">
         <div class="post-header">
@@ -35,7 +65,7 @@
                 <div class="breadcrumb">
                     <a href="index.html">Trang chủ</a>
                     <span>/</span>
-                    <a href="index.html#blog">Blog</a>
+                    <a href="pages/blog.html">Blog</a>
                     <span>/</span>
                     <span>Discord Bot Development</span>
                 </div>
@@ -412,10 +442,10 @@ client.on(Events.MessageCreate, message => {
                             <h3>Nguyễn Thành Luân</h3>
                             <p>Sinh viên CNTT, Founder Ma Đạo Community (3000+ members), Discord Bot Developer</p>
                             <div class="social-links">
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-github"></i></a>
-                                <a href="#"><i class="fab fa-tiktok"></i></a>
-                                <a href="#"><i class="fab fa-discord"></i></a>
+                                <a href="https://facebook.com/LuanEm2709" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                                <a href="https://github.com/luanem2709" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                                <a href="https://www.tiktok.com/@LuanEm2709" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                                <a href="https://discord.gg/NUh6Mf22" target="_blank" rel="noopener"><i class="fab fa-discord"></i></a>
                             </div>
                         </div>
 
@@ -440,15 +470,10 @@ client.on(Events.MessageCreate, message => {
         </div>
     </article>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2024 Nguyễn Thành Luân. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer + nút cuộn được nạp bởi component-loader.js -->
 
     <script src="js/config.js"></script>
+    <script src="js/component-loader.js"></script>
     <script src="js/blog-reading-progress.js"></script>
     <script src="script.js"></script>
 </body>

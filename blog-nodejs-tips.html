@@ -4,30 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Node.js Tips & Tricks cho Developer | Thanh Luân</title>
+    <title>Node.js Tips & Tricks cho Developer - Nguyễn Thành Luân</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Tổng hợp Node.js tips & tricks thực chiến cho developer: async/await, xử lý lỗi, tối ưu hiệu năng và các mẹo backend rút ra từ dự án thật.">
+    <meta name="author" content="Nguyễn Thành Luân">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://luanem2709.github.io/portfolio-thanhluan/blog-nodejs-tips.html">
+    <meta property="og:title" content="Node.js Tips & Tricks cho Developer">
+    <meta property="og:description"
+        content="Node.js tips & tricks thực chiến: async/await, xử lý lỗi, tối ưu hiệu năng và mẹo backend.">
+    <meta property="og:image" content="https://luanem2709.github.io/portfolio-thanhluan/assets/profile.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Node.js Tips & Tricks cho Developer">
+    <meta property="twitter:description"
+        content="Node.js tips & tricks thực chiến: async/await, xử lý lỗi, tối ưu hiệu năng và mẹo backend.">
+    <meta property="twitter:image" content="https://luanem2709.github.io/portfolio-thanhluan/assets/profile.jpg">
+
+    <link rel="canonical" href="https://luanem2709.github.io/portfolio-thanhluan/blog-nodejs-tips.html">
+    <link rel="icon" type="image/png" href="assets/madao-logo.png">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="blog-styles.css">
     <link rel="stylesheet" href="blog-post.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Node.js Tips & Tricks cho Developer",
+      "author": { "@type": "Person", "name": "Nguyễn Thành Luân" },
+      "url": "https://luanem2709.github.io/portfolio-thanhluan/blog-nodejs-tips.html",
+      "image": "https://luanem2709.github.io/portfolio-thanhluan/assets/profile.jpg",
+      "datePublished": "2025-01-10",
+      "publisher": { "@type": "Organization", "name": "Ma Đạo Community" }
+    }
+    </script>
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">LUÂNEM</a>
-            </div>
-            <div class="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="index.html#home" class="nav-link">Trang Chủ</a></li>
-                    <li><a href="index.html#blog" class="nav-link active">Blog</a></li>
-                    <li><a href="index.html#contact" class="nav-link">Liên Hệ</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Navbar được nạp bởi component-loader.js -->
 
     <article class="blog-post">
         <div class="post-header">
@@ -35,7 +65,7 @@
                 <div class="breadcrumb">
                     <a href="index.html">Trang chủ</a>
                     <span>/</span>
-                    <a href="index.html#blog">Blog</a>
+                    <a href="pages/blog.html">Blog</a>
                     <span>/</span>
                     <span>Node.js Tips</span>
                 </div>
@@ -493,14 +523,14 @@ process.on('uncaughtException', (error) => {
 
                     <aside class="post-sidebar">
                         <div class="sidebar-card author-card">
-                            <img src="assets/avatar.jpg" alt="Thanh Luân" class="author-image">
-                            <h3>Nguyễn Thanh Luân</h3>
+                            <img src="assets/avatar.jpg" alt="Nguyễn Thành Luân" class="author-image">
+                            <h3>Nguyễn Thành Luân</h3>
                             <p>Full-stack Developer với 2+ năm kinh nghiệm Node.js. Founder Ma Đạo Community! 💻</p>
                             <div class="author-social">
-                                <a href="https://facebook.com/LuanEm2709" target="_blank"><i
+                                <a href="https://facebook.com/LuanEm2709" target="_blank" rel="noopener"><i
                                         class="fab fa-facebook"></i></a>
-                                <a href="https://github.com/luanem2709" target="_blank"><i class="fab fa-github"></i></a>
-                                <a href="https://discord.gg/NUh6Mf22" target="_blank"><i class="fab fa-discord"></i></a>
+                                <a href="https://github.com/luanem2709" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                                <a href="https://discord.gg/NUh6Mf22" target="_blank" rel="noopener"><i class="fab fa-discord"></i></a>
                             </div>
                         </div>
 
@@ -544,37 +574,10 @@ process.on('uncaughtException', (error) => {
         </div>
     </article>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Thanh Luân</h3>
-                    <p>Full-stack Developer & Community Builder</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Liên Kết</h3>
-                    <ul>
-                        <li><a href="index.html#home">Trang Chủ</a></li>
-                        <li><a href="index.html#blog">Blog</a></li>
-                        <li><a href="index.html#contact">Liên Hệ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Theo Dõi</h3>
-                    <div class="footer-social">
-                        <a href="https://github.com/luanem2709" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://discord.gg/NUh6Mf22" target="_blank"><i class="fab fa-discord"></i></a>
-                        <a href="https://www.tiktok.com/@LuanEm2709" target="_blank"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Nguyễn Thanh Luân. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer + nút cuộn được nạp bởi component-loader.js -->
 
     <script src="js/config.js"></script>
+    <script src="js/component-loader.js"></script>
     <script src="js/blog-reading-progress.js"></script>
     <script src="script.js"></script>
 </body>
